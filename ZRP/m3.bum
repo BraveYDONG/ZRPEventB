@@ -6,7 +6,7 @@
     <org.eventb.core.variable name="." org.eventb.core.identifier="DNeighborLink"/>
     <org.eventb.core.variable name="3" org.eventb.core.identifier="LinkStateTable"/>
     <org.eventb.core.variable name="5" org.eventb.core.identifier="RoutingTable"/>
-    <org.eventb.core.variable name="?" org.eventb.core.identifier="InsertTime"/>
+    <org.eventb.core.variable name="?" org.eventb.core.identifier="InsertionTime"/>
     <org.eventb.core.variable name="A" org.eventb.core.identifier="Time"/>
     <org.eventb.core.variable name="C" org.eventb.core.identifier="BroadcastTime"/>
     <org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
@@ -34,39 +34,29 @@
         <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="nodes = "/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd5" org.eventb.core.predicate="∀x,y·x∈Nodes ∧ y∈nodes(x) ⇒ x↦y ∈ closure(LinkStateTable(x))"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="obtainLinks">
+    <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="obtainLinks">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="obtainLinks"/>
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="node"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="addlinks"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="removelinks"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="addlinks = {p↦m∣ p = node ∧ p↦m ∈ NeighborLink ∧ p↦m ∉ LinkStateTable(p)}"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="removelinks = {p↦m∣ p = node ∧ p↦m ∉ NeighborLink ∧ p↦m ∈ LinkStateTable(p)}"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="Time − BroadcastTime(node) ≥ period"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="rest = removelinks ⩤ InsertionTime(node)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="InsertionTime(node) ≔ rest  ((({node} ◁ dom(rest) ∪ addlinks) × {Time})" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="BroadcastTime(node) ≔ Time" org.eventb.core.label="act2"/>
-        <org.eventb.core.parameter name="0" org.eventb.core.identifier="rest"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="transferLinks">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="transferLinks"/>
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="sender"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="receiver"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="transferNode"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="sender ≠ receiver ∧ receiver ≠ transferNode"/>
         <org.eventb.core.guard name="4" org.eventb.core.label="grd1" org.eventb.core.predicate="sender ∈ Nodes ∧ receiver ∈ Nodes ∧ transferNode ∈ Nodes"/>
+        <org.eventb.core.guard name="=" org.eventb.core.label="grd2" org.eventb.core.predicate="sender ≠ receiver ∧ receiver ≠ transferNode"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="sender ↦ receiver ∈ LinkStateTable(sender)"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="receivedlinks ∈ Nodes ↔ Nodes ∧ dom(receivedlinks) = {transferNode}"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="addlinks = receivedlinks"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="removelinks = {transferNode} ◁ LinkStateTable(receiver)"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="LinkStateTable(receiver) ≔ (LinkStateTable(receiver)∖removelinks) ∪ addlinks" org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="1" org.eventb.core.identifier="receivedlinks"/>
-        <org.eventb.core.parameter name="2" org.eventb.core.identifier="addlinks"/>
-        <org.eventb.core.parameter name="3" org.eventb.core.identifier="removelinks"/>
         <org.eventb.core.action name="5" org.eventb.core.assignment="InsertionTime(receiver) ≔ (removelinks ⩤ InsertionTime(receiver)) ∪ (addlinks × {Time})" org.eventb.core.label="act2"/>
+        <org.eventb.core.parameter name="&gt;" org.eventb.core.identifier="addlinks"/>
+        <org.eventb.core.parameter name="?" org.eventb.core.identifier="removelinks"/>
         <org.eventb.core.parameter name="6" org.eventb.core.identifier="receivedTTL"/>
-        <org.eventb.core.parameter name="7" org.eventb.core.identifier="receivedSeqSum"/>
-        <org.eventb.core.guard name="8" org.eventb.core.label="grd7" org.eventb.core.predicate="receivedTTL &gt; 0 ∧ receivedSeqSum &gt;0"/>
-        <org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="SeqNum(receiver)(transferNode) ≤ receivedSeqSum"/>
+        <org.eventb.core.parameter name="7" org.eventb.core.identifier="receivedSeqNum"/>
+        <org.eventb.core.guard name="8" org.eventb.core.label="grd7" org.eventb.core.predicate="receivedTTL &gt; 0 ∧ receivedSeqNum &gt;0"/>
+        <org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="SeqNum(receiver)(transferNode) ≤ receivedSeqNum"/>
         <org.eventb.core.action name=":" org.eventb.core.assignment="TTL(receiver) ≔ TTL(receiver)  {transferNode ↦ receivedTTL −1}" org.eventb.core.label="act3"/>
         <org.eventb.core.action name=";" org.eventb.core.assignment="SeqNum(receiver) ≔ SeqNum(receiver)  {transferNode ↦ receivedSeqNum}" org.eventb.core.label="act4"/>
     </org.eventb.core.event>

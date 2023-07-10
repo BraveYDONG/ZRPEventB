@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
     <org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/ZRP/m0.bcm" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.refinesMachine#'"/>
     <org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/ZRP/c1.bcc" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.seesContext#;"/>
     <org.eventb.core.scInternalContext name="c0">
@@ -9,6 +9,12 @@
     </org.eventb.core.scInternalContext>
     <org.eventb.core.scInternalContext name="c1">
         <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/ZRP/c0.bcc|org.eventb.core.scContextFile#c0" org.eventb.core.source="/ZRP/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.extendsContext#'"/>
+        <org.eventb.core.scAxiom name="c1" org.eventb.core.label="axm1" org.eventb.core.predicate="closure∈(Nodes ↔ Nodes) → (Nodes ↔ Nodes)" org.eventb.core.source="/ZRP/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c2" org.eventb.core.label="axm2" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·r⊆closure(r)" org.eventb.core.source="/ZRP/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c3" org.eventb.core.label="axm3" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);r⊆closure(r)" org.eventb.core.source="/ZRP/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c4" org.eventb.core.label="axm4" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes),s⦂ℙ(Nodes×Nodes)·r⊆s∧s;r⊆s⇒closure(r)⊆s" org.eventb.core.source="/ZRP/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c5" org.eventb.core.label="axm5" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);closure(r)⊆closure(r)" org.eventb.core.source="/ZRP/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+        <org.eventb.core.scConstant name="closure" org.eventb.core.source="/ZRP/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#-" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
     </org.eventb.core.scInternalContext>
     <org.eventb.core.scInvariant name="c1" org.eventb.core.label="inv1" org.eventb.core.predicate="NeighborLink∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
     <org.eventb.core.scInvariant name="c2" org.eventb.core.label="inv2" org.eventb.core.predicate="DNeighborLink∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/" org.eventb.core.theorem="false"/>
@@ -82,9 +88,10 @@
         <org.eventb.core.scParameter name="addRoutes" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.parameter#(" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
         <org.eventb.core.scAction name="removeRoutet" org.eventb.core.assignment="RoutingTable ≔ RoutingTable{node ↦ (RoutingTable(node) ∖ removeRoutes)∪addRoutes}" org.eventb.core.label="act1" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.action#."/>
     </org.eventb.core.scEvent>
-    <org.eventb.core.scEvent name="LinkStateTabll" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="stabilize" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#:">
+    <org.eventb.core.scEvent name="LinkStateTabll" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="stabilize" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#:">
         <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="nodes∈Nodes → ℙ(Nodes)" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#:|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
         <org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink⇔m ↦ n∈LinkStateTable(m)" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#:|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·m ↦ n∈closure(NeighborLink)∧n∈nodes(m)⇒(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#:|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
         <org.eventb.core.scParameter name="nodes" org.eventb.core.source="/ZRP/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#:|org.eventb.core.parameter#'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes))"/>
     </org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>
