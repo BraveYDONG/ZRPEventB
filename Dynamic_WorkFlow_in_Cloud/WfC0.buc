@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.axiom name="," org.eventb.core.label="axm1" org.eventb.core.predicate="TASKS ⊆ NODES ∧ ND_SPLIT ⊆ NODES ∧ ND_JOIN ⊆ NODES"/>
+    <org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="NODES = TASKS ∪ ND_SPLIT ∪ ND_JOIN"/>
+    <org.eventb.core.constant name="-" org.eventb.core.comment="任务节点" org.eventb.core.identifier="TASKS"/>
+    <org.eventb.core.carrierSet name="0" org.eventb.core.comment="节点 有限集" org.eventb.core.identifier="NODES"/>
+    <org.eventb.core.constant name="1" org.eventb.core.comment="分节点" org.eventb.core.identifier="ND_SPLIT"/>
+    <org.eventb.core.constant name="2" org.eventb.core.comment="合节点" org.eventb.core.identifier="ND_JOIN"/>
+    <org.eventb.core.axiom name="5" org.eventb.core.label="axm3" org.eventb.core.predicate="finite(NODES)"/>
+</org.eventb.core.contextFile>

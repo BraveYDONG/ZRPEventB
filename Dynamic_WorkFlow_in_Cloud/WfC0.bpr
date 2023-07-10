@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="axm3/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="d" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="NODES">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees d)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                                <org.eventb.core.prIdent name="d" org.eventb.core.type="ℤ"/>
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p6"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="ND_JOIN⊆NODES">
+            <org.eventb.core.prIdent name="ND_JOIN" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(NODES)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="ND_SPLIT⊆NODES">
+            <org.eventb.core.prIdent name="ND_SPLIT" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="d∈ℕ">
+            <org.eventb.core.prIdent name="d" org.eventb.core.type="ℤ"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="TASKS⊆NODES">
+            <org.eventb.core.prIdent name="TASKS" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀d⦂ℤ·d∈ℕ⇒finite(NODES)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TASKS⊆NODES∧ND_SPLIT⊆NODES∧ND_JOIN⊆NODES">
+            <org.eventb.core.prIdent name="ND_JOIN" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ND_SPLIT" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="TASKS" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="d∈ℕ⇒finite(NODES)">
+            <org.eventb.core.prIdent name="d" org.eventb.core.type="ℤ"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm4/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p3"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="ND_JOIN⊆NODES">
+            <org.eventb.core.prIdent name="ND_JOIN" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="ND_SPLIT⊆NODES">
+            <org.eventb.core.prIdent name="ND_SPLIT" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="d∈ℕ">
+            <org.eventb.core.prIdent name="d" org.eventb.core.type="ℤ"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="d&gt;0">
+            <org.eventb.core.prIdent name="d" org.eventb.core.type="ℤ"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TASKS⊆NODES">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="TASKS" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="d∈ℕ∧d&gt;0">
+            <org.eventb.core.prIdent name="d" org.eventb.core.type="ℤ"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TASKS⊆NODES∧ND_SPLIT⊆NODES∧ND_JOIN⊆NODES">
+            <org.eventb.core.prIdent name="ND_JOIN" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ND_SPLIT" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="TASKS" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm3/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p3"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="ND_JOIN⊆NODES">
+            <org.eventb.core.prIdent name="ND_JOIN" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="ND_SPLIT⊆NODES">
+            <org.eventb.core.prIdent name="ND_SPLIT" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TASKS⊆NODES">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="TASKS" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TASKS⊆NODES∧ND_SPLIT⊆NODES∧ND_JOIN⊆NODES">
+            <org.eventb.core.prIdent name="ND_JOIN" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ND_SPLIT" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="TASKS" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

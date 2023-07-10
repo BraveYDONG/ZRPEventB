@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="TASKS⊆NODES∧ND_SPLIT⊆NODES∧ND_JOIN⊆NODES" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="NODES=TASKS∪ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="finite(NODES)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.axiom#5" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.constant#2" org.eventb.core.type="ℙ(NODES)"/>
+    <org.eventb.core.scConstant name="ND_SPLIT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.constant#1" org.eventb.core.type="ℙ(NODES)"/>
+    <org.eventb.core.scCarrierSet name="NODES" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.carrierSet#0" org.eventb.core.type="ℙ(NODES)"/>
+    <org.eventb.core.scConstant name="TASKS" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.constant#-" org.eventb.core.type="ℙ(NODES)"/>
+</org.eventb.core.scContextFile>

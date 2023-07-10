@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="ND_JOIN" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="ND_SPLIT" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="TASKS" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poPredicate name="ND_SPLIU" org.eventb.core.predicate="TASKS⊆NODES∧ND_SPLIT⊆NODES∧ND_JOIN⊆NODES" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="ND_SPLIV" org.eventb.core.predicate="NODES=TASKS∪ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.axiom#+"/>
+        <org.eventb.core.poPredicate name="ND_SPLIW" org.eventb.core.predicate="finite(NODES)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfC0.buc|org.eventb.core.contextFile#WfC0|org.eventb.core.axiom#5"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="CON_Type" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        <org.eventb.core.poIdentifier name="ND_join" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="closure" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        <org.eventb.core.poIdentifier name="ND" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="ND_split" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="Initial_Tasks" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="Seq" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        <org.eventb.core.poIdentifier name="Final_Tasks" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="Tasks" org.eventb.core.type="ℙ(NODES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="inv9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀nds⦂NODES·nds∈ND_split∧nds∈ran(Seq)⇒finite(Seq∼[{nds}])" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="inv11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND ↔ ND⇒r∈dom(closure)∧closure∈ℙ(NODES × NODES) ⇸ ℙ(NODES × NODES)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="inv12/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC;"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND ↔ ND⇒r∈dom(closure)∧closure∈ℙ(NODES × NODES) ⇸ ℙ(NODES × NODES)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC;"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="inv13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC="/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),s⦂ℙ(NODES×NODES)·r∈ND ↔ ND∧s∈ND ↔ ND∧r⊆s∧s;r⊆s⇒r∈dom(closure)∧closure∈ℙ(NODES × NODES) ⇸ ℙ(NODES × NODES)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC="/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="inv14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC&gt;"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,T0⦂NODES·node∈ND∧T0∈Initial_Tasks∧node≠T0⇒Seq∈dom(closure)∧closure∈ℙ(NODES × NODES) ⇸ ℙ(NODES × NODES)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC&gt;"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="inv15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC?"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,Tf⦂NODES·node∈ND∧Tf∈Final_Tasks∧node≠Tf⇒Seq∈dom(closure)∧closure∈ℙ(NODES × NODES) ⇸ ℙ(NODES × NODES)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC?"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(NODES))⊆TASKS∧(∅ ⦂ ℙ(NODES))⊆ND_SPLIT∧(∅ ⦂ ℙ(NODES))⊆ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(NODES))=(∅ ⦂ ℙ(NODES))∪(∅ ⦂ ℙ(NODES))∪(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(NODES×NODES))∈(∅ ⦂ ℙ(NODES)) → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(NODES×NODES))∈(∅ ⦂ ℙ(NODES)) ↔ (∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(NODES))⊆(∅ ⦂ ℙ(NODES))∧(∅ ⦂ ℙ(NODES))⊆(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T⦂NODES·T∈(∅ ⦂ ℙ(NODES)) ∖ (∅ ⦂ ℙ(NODES))∧x1 ↦ T∈(∅ ⦂ ℙ(NODES×NODES))∧x1≠x2⇒x2 ↦ T∉(∅ ⦂ ℙ(NODES×NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T⦂NODES·T∈(∅ ⦂ ℙ(NODES)) ∖ (∅ ⦂ ℙ(NODES))∧T ↦ x1∈(∅ ⦂ ℙ(NODES×NODES))∧x1≠x2⇒T ↦ x2∉(∅ ⦂ ℙ(NODES×NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀nds⦂NODES·nds∈(∅ ⦂ ℙ(NODES))∧nds∈ran(∅ ⦂ ℙ(NODES×NODES))⇒card((∅ ⦂ ℙ(NODES×NODES))∼[{nds}])=1" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{(∅ ⦂ ℙ(NODES×NODES)) ↦ (∅ ⦂ ℙ(NODES×NODES))}∈((∅ ⦂ ℙ(NODES)) ↔ (∅ ⦂ ℙ(NODES))) → ((∅ ⦂ ℙ(NODES)) ↔ (∅ ⦂ ℙ(NODES)))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈(∅ ⦂ ℙ(NODES)) ↔ (∅ ⦂ ℙ(NODES))⇒r⊆{(∅ ⦂ ℙ(NODES×NODES)) ↦ (∅ ⦂ ℙ(NODES×NODES))}(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC;|org.eventb.core.poPredicate#PRD10"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈(∅ ⦂ ℙ(NODES)) ↔ (∅ ⦂ ℙ(NODES))⇒{(∅ ⦂ ℙ(NODES×NODES)) ↦ (∅ ⦂ ℙ(NODES×NODES))}(r);r⊆{(∅ ⦂ ℙ(NODES×NODES)) ↦ (∅ ⦂ ℙ(NODES×NODES))}(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC=|org.eventb.core.poPredicate#PRD11"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),s⦂ℙ(NODES×NODES)·r∈(∅ ⦂ ℙ(NODES)) ↔ (∅ ⦂ ℙ(NODES))∧s∈(∅ ⦂ ℙ(NODES)) ↔ (∅ ⦂ ℙ(NODES))∧r⊆s∧s;r⊆s⇒{(∅ ⦂ ℙ(NODES×NODES)) ↦ (∅ ⦂ ℙ(NODES×NODES))}(r)⊆s" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC&gt;|org.eventb.core.poPredicate#PRD12"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,T0⦂NODES·node∈(∅ ⦂ ℙ(NODES))∧T0∈(∅ ⦂ ℙ(NODES))∧node≠T0⇒node∈({(∅ ⦂ ℙ(NODES×NODES)) ↦ (∅ ⦂ ℙ(NODES×NODES))}(∅ ⦂ ℙ(NODES×NODES)))[{T0}]" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC?|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,Tf⦂NODES·node∈(∅ ⦂ ℙ(NODES))∧Tf∈(∅ ⦂ ℙ(NODES))∧node≠Tf⇒({(∅ ⦂ ℙ(NODES×NODES)) ↦ (∅ ⦂ ℙ(NODES×NODES))}(∅ ⦂ ℙ(NODES×NODES)))[{node}]∩{Tf}≠(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#INITIALISATION\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTInitial_Taskt" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="Initial_Tasks'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="Seq'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        <org.eventb.core.poIdentifier name="Final_Tasks'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="ND'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="closure'" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        <org.eventb.core.poIdentifier name="ND_split'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="Tasks'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="ND_join'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="CON_Type'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPInitial_Taskt" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTIDENTInitial_Taskt" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poSequent name="Insert_Task/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Tasks∪{T}⊆TASKS∧ND_split⊆ND_SPLIT∧ND_join⊆ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ND∪{T}=(Tasks∪{T})∪ND_split∪ND_join" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="CON_Type'∈ND∪{T} → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act4"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CON_Type'∈ND∪{T} → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b}∈ND∪{T} ↔ ND∪{T}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Final_Tasks⊆Tasks∪{T}∧Initial_Tasks⊆Tasks∪{T}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T0⦂NODES·T0∈(Tasks∪{T}) ∖ Initial_Tasks∧x1 ↦ T0∈(Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b}∧x1≠x2⇒x2 ↦ T0∉(Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T0⦂NODES·T0∈(Tasks∪{T}) ∖ Final_Tasks∧T0 ↦ x1∈(Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b}∧x1≠x2⇒T0 ↦ x2∉(Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀nds⦂NODES·nds∈ND_split∧nds∈ran((Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b})⇒card(((Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b})∼[{nds}])=1" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="closure'∈(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND∪{T} ↔ ND∪{T}⇒r⊆closure'(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC;|org.eventb.core.poPredicate#PRD10"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND∪{T} ↔ ND∪{T}⇒closure'(r);r⊆closure'(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC=|org.eventb.core.poPredicate#PRD11"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),s⦂ℙ(NODES×NODES)·r∈ND∪{T} ↔ ND∪{T}∧s∈ND∪{T} ↔ ND∪{T}∧r⊆s∧s;r⊆s⇒closure'(r)⊆s" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC&gt;|org.eventb.core.poPredicate#PRD12"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,T0⦂NODES·node∈ND∪{T}∧T0∈Initial_Tasks∧node≠T0⇒node∈(closure'((Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b}))[{T0}]" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC?|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,Tf⦂NODES·node∈ND∪{T}∧Tf∈Final_Tasks∧node≠Tf⇒(closure'((Seq ∖ {a ↦ b})∪{a ↦ T,T ↦ b}))[{node}]∩{Tf}≠(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Insert_Task\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/act4/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(ND∪{T} ↔ ND∪{T}) → (ND∪{T} ↔ ND∪{T})≠(∅ ⦂ ℙ(ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act3"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Insert_Task/act5/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ND∪{T} → ND_SPLIT∪ND_JOIN≠(∅ ⦂ ℙ(ℙ(NODES×NODES)))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act4"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.action#act4"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Tasku"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTInitial_Tasku" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="Seq'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        <org.eventb.core.poIdentifier name="T" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="ND'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="closure'" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        <org.eventb.core.poIdentifier name="Tasks'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="CON_Type'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPInitial_Tasku" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTIDENTInitial_Tasku" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="T∉Tasks∧a∈Tasks∧b∈Tasks∧a≠b" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.guard#element3"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a ↦ b∈Seq" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#C|org.eventb.core.guard#element5"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Remove_Task/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Tasks ∖ {T}⊆TASKS∧ND_split⊆ND_SPLIT∧ND_join⊆ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ND ∖ {T}=(Tasks ∖ {T})∪ND_split∪ND_join" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="CON_Type'∈ND ∖ {T} → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#0"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CON_Type'∈ND ∖ {T} → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b}∈ND ∖ {T} ↔ ND ∖ {T}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Final_Tasks⊆Tasks ∖ {T}∧Initial_Tasks⊆Tasks ∖ {T}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T0⦂NODES·T0∈(Tasks ∖ {T}) ∖ Initial_Tasks∧x1 ↦ T0∈(Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b}∧x1≠x2⇒x2 ↦ T0∉(Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T0⦂NODES·T0∈(Tasks ∖ {T}) ∖ Final_Tasks∧T0 ↦ x1∈(Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b}∧x1≠x2⇒T0 ↦ x2∉(Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀nds⦂NODES·nds∈ND_split∧nds∈ran((Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b})⇒card(((Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b})∼[{nds}])=1" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="closure'∈(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND ∖ {T} ↔ ND ∖ {T}⇒r⊆closure'(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC;|org.eventb.core.poPredicate#PRD10"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND ∖ {T} ↔ ND ∖ {T}⇒closure'(r);r⊆closure'(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC=|org.eventb.core.poPredicate#PRD11"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),s⦂ℙ(NODES×NODES)·r∈ND ∖ {T} ↔ ND ∖ {T}∧s∈ND ∖ {T} ↔ ND ∖ {T}∧r⊆s∧s;r⊆s⇒closure'(r)⊆s" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC&gt;|org.eventb.core.poPredicate#PRD12"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,T0⦂NODES·node∈ND ∖ {T}∧T0∈Initial_Tasks∧node≠T0⇒node∈(closure'((Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b}))[{T0}]" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC?|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,Tf⦂NODES·node∈ND ∖ {T}∧Tf∈Final_Tasks∧node≠Tf⇒(closure'((Seq ∖ {a ↦ T,T ↦ b})∪{a ↦ b}))[{node}]∩{Tf}≠(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Remove_Task\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/act4/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(ND ∖ {T} ↔ ND ∖ {T}) → (ND ∖ {T} ↔ ND ∖ {T})≠(∅ ⦂ ℙ(ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#\/"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Remove_Task/act5/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ND ∖ {T} → ND_SPLIT∪ND_JOIN≠(∅ ⦂ ℙ(ℙ(NODES×NODES)))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.action#0"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskv"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTInitial_Taskv" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="Seq'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        <org.eventb.core.poIdentifier name="T" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="ND'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="closure'" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        <org.eventb.core.poIdentifier name="Tasks'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="CON_Type'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPInitial_Taskv" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTIDENTInitial_Taskv" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="T∈Tasks∧a∈Tasks∧b∈Tasks∧a≠b" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a ↦ T∈Seq∧T ↦ b∈Seq" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#B|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Replace_Task/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(Tasks ∖ {T1})∪{T2}⊆TASKS∧ND_split⊆ND_SPLIT∧ND_join⊆ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(ND ∖ {T1})∪{T2}=((Tasks ∖ {T1})∪{T2})∪ND_split∪ND_join" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="CON_Type'∈(ND∪{T2}) ∖ {T1} → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act4"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CON_Type'∈(ND ∖ {T1})∪{T2} → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b}∈(ND ∖ {T1})∪{T2} ↔ (ND ∖ {T1})∪{T2}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Final_Tasks⊆(Tasks ∖ {T1})∪{T2}∧Initial_Tasks⊆(Tasks ∖ {T1})∪{T2}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T⦂NODES·T∈((Tasks ∖ {T1})∪{T2}) ∖ Initial_Tasks∧x1 ↦ T∈(Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b}∧x1≠x2⇒x2 ↦ T∉(Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T⦂NODES·T∈((Tasks ∖ {T1})∪{T2}) ∖ Final_Tasks∧T ↦ x1∈(Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b}∧x1≠x2⇒T ↦ x2∉(Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b}" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀nds⦂NODES·nds∈ND_split∧nds∈ran((Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b})⇒card(((Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b})∼[{nds}])=1" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1}) → ((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="closure'∈((ND ∖ {T1})∪{T2} ↔ (ND ∖ {T1})∪{T2}) → ((ND ∖ {T1})∪{T2} ↔ (ND ∖ {T1})∪{T2})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1}) → ((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈(ND ∖ {T1})∪{T2} ↔ (ND ∖ {T1})∪{T2}⇒r⊆closure'(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC;|org.eventb.core.poPredicate#PRD10"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1}) → ((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈(ND ∖ {T1})∪{T2} ↔ (ND ∖ {T1})∪{T2}⇒closure'(r);r⊆closure'(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC=|org.eventb.core.poPredicate#PRD11"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1}) → ((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),s⦂ℙ(NODES×NODES)·r∈(ND ∖ {T1})∪{T2} ↔ (ND ∖ {T1})∪{T2}∧s∈(ND ∖ {T1})∪{T2} ↔ (ND ∖ {T1})∪{T2}∧r⊆s∧s;r⊆s⇒closure'(r)⊆s" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC&gt;|org.eventb.core.poPredicate#PRD12"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1}) → ((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,T0⦂NODES·node∈(ND ∖ {T1})∪{T2}∧T0∈Initial_Tasks∧node≠T0⇒node∈(closure'((Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b}))[{T0}]" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC?|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="closure'∈((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1}) → ((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1})" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀node⦂NODES,Tf⦂NODES·node∈(ND ∖ {T1})∪{T2}∧Tf∈Final_Tasks∧node≠Tf⇒(closure'((Seq ∖ {a ↦ T1,T1 ↦ b})∪{a ↦ T2,T2 ↦ b}))[{node}]∩{Tf}≠(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poSequent#Replace_Task\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/act4/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1}) → ((ND∪{T2}) ∖ {T1} ↔ (ND∪{T2}) ∖ {T1})≠(∅ ⦂ ℙ(ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act3"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Replace_Task/act5/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(ND∪{T2}) ∖ {T1} → ND_SPLIT∪ND_JOIN≠(∅ ⦂ ℙ(ℙ(NODES×NODES)))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act4"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.action#act4"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTALLHYPInitial_Taskw"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTInitial_Taskw" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="Seq'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        <org.eventb.core.poIdentifier name="ND'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="closure'" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        <org.eventb.core.poIdentifier name="Tasks'" org.eventb.core.type="ℙ(NODES)"/>
+        <org.eventb.core.poIdentifier name="T1" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="NODES"/>
+        <org.eventb.core.poIdentifier name="CON_Type'" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        <org.eventb.core.poIdentifier name="T2" org.eventb.core.type="NODES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPInitial_Taskw" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#EVTIDENTInitial_Taskw" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="T1∈Tasks∧T2∉Tasks∧a∈Tasks∧b∈Tasks∧a≠b" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.guard#element2"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a ↦ T1∈Seq∧T1 ↦ b∈Seq" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.event#D|org.eventb.core.guard#element6"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPWfC8" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ND⊆NODES" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Tasks⊆TASKS∧ND_split⊆ND_SPLIT∧ND_join⊆ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ND=Tasks∪ND_split∪ND_join" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CON_Type∈ND → ND_SPLIT∪ND_JOIN" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Seq∈ND ↔ ND" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Final_Tasks⊆Tasks∧Initial_Tasks⊆Tasks" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T⦂NODES·T∈Tasks ∖ Initial_Tasks∧x1 ↦ T∈Seq∧x1≠x2⇒x2 ↦ T∉Seq" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∀x1⦂NODES,x2⦂NODES,T⦂NODES·T∈Tasks ∖ Final_Tasks∧T ↦ x1∈Seq∧x1≠x2⇒T ↦ x2∉Seq" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#8"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPWfC:" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC8" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀nds⦂NODES·nds∈ND_split∧nds∈ran(Seq)⇒card(Seq∼[{nds}])=1" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="closure∈(ND ↔ ND) → (ND ↔ ND)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#:"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPWfC;" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC:" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND ↔ ND⇒r⊆closure(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#="/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPWfC=" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC;" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈ND ↔ ND⇒closure(r);r⊆closure(r)" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#&gt;"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPWfC&gt;" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC=" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),s⦂ℙ(NODES×NODES)·r∈ND ↔ ND∧s∈ND ↔ ND∧r⊆s∧s;r⊆s⇒closure(r)⊆s" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#?"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPWfC?" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC&gt;" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="∀node⦂NODES,T0⦂NODES·node∈ND∧T0∈Initial_Tasks∧node≠T0⇒node∈(closure(Seq))[{T0}]" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#@"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Dynamic_WorkFlow_in_Cloud/WfM0.bpo|org.eventb.core.poFile#WfM0|org.eventb.core.poPredicateSet#HYPWfC?" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="∀node⦂NODES,Tf⦂NODES·node∈ND∧Tf∈Final_Tasks∧node≠Tf⇒(closure(Seq))[{node}]∩{Tf}≠(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Dynamic_WorkFlow_in_Cloud/WfM0.bum|org.eventb.core.machineFile#WfM0|org.eventb.core.invariant#A"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
