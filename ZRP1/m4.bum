@@ -15,6 +15,7 @@
 <org.eventb.core.action name="+" org.eventb.core.assignment="TransmittedLink ≔ Nodes × Nodes × {Nodes × {Nodes × Nodes}}" org.eventb.core.label="act14"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="TransmittedSeqNum ≔ Nodes × Nodes × {Nodes × {1}}" org.eventb.core.label="act15"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="TransmittedTTL ≔ Nodes × Nodes × {Nodes × {1}}" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="trans" org.eventb.core.label="act17"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="Flag ≔ Nodes×{Nodes×{FALSE}}" org.eventb.core.label="act13"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Add_NewLink">

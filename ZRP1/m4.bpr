@@ -780,10 +780,10 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes,p⦂Nodes·(Nodes × Nodes × {Nodes × {Nodes × Nodes}})(m ↦ n)(p)≠(∅ ⦂ ℙ(Nodes×Nodes))∧n≠p⇒dom((Nodes × Nodes × {Nodes × {Nodes × Nodes}})(m ↦ n)(p))={p}"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀n⦂Nodes,p⦂Nodes·¬n=p⇒Nodes={p}"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀n⦂Nodes,p⦂Nodes·¬⊥∧¬n=p⇒Nodes={p}"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="transferLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="p,m,n" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="Nodes">
 <org.eventb.core.lang name="L"/>

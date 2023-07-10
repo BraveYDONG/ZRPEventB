@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="32">
+<org.eventb.core.poFile org.eventb.core.poStamp="33">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="10">
 <org.eventb.core.poIdentifier name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 <org.eventb.core.poPredicate name="Nodet" org.eventb.core.predicate="finite(Nodes)" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#'"/>
@@ -65,7 +65,7 @@
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#d"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#HYPcJ"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="33">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedSeqNun"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × Nodes × {Nodes × {Nodes × Nodes}}∈Nodes × Nodes → (Nodes → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#\\"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D"/>
@@ -74,7 +74,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#HYPcI|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="33">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedSeqNun"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × Nodes × {Nodes × {1}}∈Nodes × Nodes → (Nodes → ℕ)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#^"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D"/>
@@ -83,7 +83,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#HYPcI|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="33">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedSeqNun"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × Nodes × {Nodes × {1}}∈Nodes × Nodes → (Nodes → ℕ)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#`"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D"/>
@@ -92,7 +92,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#HYPcI|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="33">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedSeqNun"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × {Nodes × {FALSE}}∈Nodes → (Nodes → BOOL)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#b"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D"/>
@@ -101,7 +101,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#HYPcI|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="33">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedSeqNun"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes,p⦂Nodes·(Nodes × Nodes × {Nodes × {Nodes × Nodes}})(m ↦ n)(p)≠(∅ ⦂ ℙ(Nodes×Nodes))∧n≠p⇒m ↦ n∈(Nodes × {Nodes × Nodes})(m)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#c"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D"/>
@@ -110,7 +110,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#HYPcJ|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="33">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m4.bpo|org.eventb.core.poFile#m4|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedSeqNun"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes,p⦂Nodes·(Nodes × Nodes × {Nodes × {Nodes × Nodes}})(m ↦ n)(p)≠(∅ ⦂ ℙ(Nodes×Nodes))∧n≠p⇒dom((Nodes × Nodes × {Nodes × {Nodes × Nodes}})(m ↦ n)(p))={p}" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#d"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D"/>
