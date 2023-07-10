@@ -31,7 +31,7 @@
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="nodes ∈ Nodes → ℙ(Nodes)"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="∀m, n · m ↦ n ∈ NeighborLink ⇔ m ↦ n ∈ LinkStateTable(m)"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="∀m, n · m ↦ n ∈ closure(NeighborLink) ∧ n ∈ nodes(m) ⇒ ( ∀ x · m ↦ x ∈ LinkStateTable(m) ⇔ m ↦ x ∈ LinkStateTable(n))"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="nodes = "/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="nodes = (λx·x∈Nodes∣dom(LinkStateTable(x)))"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd5" org.eventb.core.predicate="∀x,y·x∈Nodes ∧ y∈nodes(x) ⇒ x↦y ∈ closure(LinkStateTable(x))"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="obtainLinks">
