@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/ZRP1/c2.bcc|org.eventb.core.scContextFile#c2" org.eventb.core.source="/ZRP1/c3.buc|org.eventb.core.contextFile#c3|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="c0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(Nodes)" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·a∈ℙ(Nodes)∧b∈ℙ(Nodes)∧f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#)" org.eventb.core.theorem="true"/>
+<org.eventb.core.scCarrierSet name="Nodes" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(Nodes)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="c1">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/ZRP1/c0.bcc|org.eventb.core.scContextFile#c0" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="c1" org.eventb.core.label="axm1" org.eventb.core.predicate="closure∈(Nodes ↔ Nodes) → (Nodes ↔ Nodes)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c2" org.eventb.core.label="axm2" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·r⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c3" org.eventb.core.label="axm3" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);r⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c4" org.eventb.core.label="axm4" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes),s⦂ℙ(Nodes×Nodes)·r⊆s∧s;r⊆s⇒closure(r)⊆s" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c5" org.eventb.core.label="axm5" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);closure(r)⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="closure" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#-" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="c2">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/ZRP1/c1.bcc|org.eventb.core.scContextFile#c1" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="c2" org.eventb.core.label="axm1" org.eventb.core.predicate="lifetime∈ℕ1" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c3" org.eventb.core.label="axm2" org.eventb.core.predicate="period∈ℕ1" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c4" org.eventb.core.label="axm3" org.eventb.core.predicate="lifetime&gt;period" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="lifetime" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.constant#(" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="period" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.constant#*" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="c3" org.eventb.core.label="axm1" org.eventb.core.predicate="zoneRadius∈ℕ1" org.eventb.core.source="/ZRP1/c3.buc|org.eventb.core.contextFile#c3|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="zoneRadius" org.eventb.core.source="/ZRP1/c3.buc|org.eventb.core.contextFile#c3|org.eventb.core.constant#(" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>

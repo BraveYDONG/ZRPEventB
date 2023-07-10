@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poPredicate name="Nodet" org.eventb.core.predicate="finite(Nodes)" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#'"/>
+<org.eventb.core.poPredicate name="Nodeu" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·a∈ℙ(Nodes)∧b∈ℙ(Nodes)∧f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#)"/>
+<org.eventb.core.poIdentifier name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·r∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·r∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes),s⦂ℙ(Nodes×Nodes)·r⊆s∧s;r⊆s⇒r∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc4"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·r∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPc1" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="closure∈(Nodes ↔ Nodes) → (Nodes ↔ Nodes)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc2" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc1" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·r⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc3" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc2" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);r⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc4" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc3" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes),s⦂ℙ(Nodes×Nodes)·r⊆s∧s;r⊆s⇒closure(r)⊆s" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ZRP1/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#HYPc4" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);closure(r)⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#,"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
