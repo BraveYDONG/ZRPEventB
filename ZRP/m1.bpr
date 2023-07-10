@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="inv3/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv1/INV"/>
+    <org.eventb.core.prProof name="INITIALISATION/inv2/INV"/>
+    <org.eventb.core.prProof name="INITIALISATION/inv3/INV"/>
+    <org.eventb.core.prProof name="updateLinks/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="updateLinks/act1/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Nodes">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p4">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+        <org.eventb.core.prIdent name="node" org.eventb.core.type="Nodes"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="node∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="node∈dom(LinkStateTable)"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="updateRoutingTable/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in ¬(addRoutes=∅∧removeRoutes=∅)" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3"/>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∨¬removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes))">
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+            <org.eventb.core.prIdent name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬(addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∧removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes)))">
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+            <org.eventb.core.prIdent name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="updateRoutingTable/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in ¬(addRoutes=∅∧removeRoutes=∅)" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3"/>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∨¬removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes))">
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+            <org.eventb.core.prIdent name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬(addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∧removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes)))">
+            <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+            <org.eventb.core.prIdent name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="updateRoutingTable/act1/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Nodes">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in ¬(addRoutes=∅∧removeRoutes=∅)" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5"/>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in ¬(addRoutes=∅∧removeRoutes=∅)" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5"/>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="RoutingTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+        <org.eventb.core.prIdent name="node" org.eventb.core.type="Nodes"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∨¬removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes))">
+            <org.eventb.core.prIdent name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="node∈dom(RoutingTable)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬(addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∧removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes)))">
+            <org.eventb.core.prIdent name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+            <org.eventb.core.prIdent name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="node∈dom(RoutingTable)∧RoutingTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="RoutingTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="stabilize/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Nodes">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4"/>
+                    <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p5"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀m⦂Nodes·m∈dom(LinkStateTable)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+            <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="(∀m⦂Nodes·m∈dom(LinkStateTable))∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀m⦂Nodes·m∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

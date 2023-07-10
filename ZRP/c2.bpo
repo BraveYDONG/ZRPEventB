@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+        <org.eventb.core.poPredicate name="Nodet" org.eventb.core.predicate="finite(Nodes)" org.eventb.core.source="/ZRP/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#'"/>
+        <org.eventb.core.poPredicate name="Nodeu" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·a∈ℙ(Nodes)∧b∈ℙ(Nodes)∧f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))" org.eventb.core.source="/ZRP/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poIdentifier name="period" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="lifetime" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ZRP/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lifetime∈ℕ1" org.eventb.core.source="/ZRP/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="period∈ℕ1" org.eventb.core.source="/ZRP/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lifetime&gt;period" org.eventb.core.source="/ZRP/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#,"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
