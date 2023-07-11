@@ -2,45 +2,72 @@
 <org.eventb.core.psFile>
 <org.eventb.core.psStatus name="inv5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="inv6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="transferLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="refreshLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sendLinks/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/grd12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/grd13/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act2/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act3/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="receiveLinks/act4/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="57" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="obtainLinks/inv5/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="transferLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="60" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="refreshLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="59" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sendLinks/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sendLinks/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendLinks/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd13/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/receivedlinks/WWD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/receivedTTL/WWD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/receivedSeqNum/WWD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="receiveLinks/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd4/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd5/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd7/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/grd8/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/act3/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="receiveLinks/act4/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="cancleSendingLinks/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="cancleSendingLinks/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="cancleSendingLinks/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

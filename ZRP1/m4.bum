@@ -15,7 +15,6 @@
 <org.eventb.core.action name="+" org.eventb.core.assignment="TransmittedLink ≔ Nodes × Nodes × {Nodes × {Nodes × Nodes}}" org.eventb.core.label="act14"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="TransmittedSeqNum ≔ Nodes × Nodes × {Nodes × {1}}" org.eventb.core.label="act15"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="TransmittedTTL ≔ Nodes × Nodes × {Nodes × {1}}" org.eventb.core.label="act16"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="trans" org.eventb.core.label="act17"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="Flag ≔ Nodes×{Nodes×{FALSE}}" org.eventb.core.label="act13"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Add_NewLink">
@@ -55,6 +54,9 @@
 <org.eventb.core.invariant name="b" org.eventb.core.label="inv4" org.eventb.core.predicate="Flag ∈ Nodes→(Nodes→BOOL)"/>
 <org.eventb.core.invariant name="c" org.eventb.core.label="inv5" org.eventb.core.predicate="∀m,n,p·TransmittedLink(m↦n)(p)≠∅ ∧ n≠p ⇒ m↦n∈LinkStateTable(m)"/>
 <org.eventb.core.invariant name="d" org.eventb.core.label="inv6" org.eventb.core.predicate="∀m,n,p·TransmittedLink(m↦n)(p)≠∅ ∧ n≠p ⇒ dom(TransmittedLink(m↦n)(p))={p}"/>
+<org.eventb.core.event name="g" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="discardLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="discardLinks"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="e" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sendLinks">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="sender"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="transferNode"/>
@@ -77,19 +79,11 @@
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="transferNode"/>
 <org.eventb.core.guard name="4" org.eventb.core.label="grd1" org.eventb.core.predicate="sender ∈ Nodes ∧ receiver ∈ Nodes ∧ transferNode ∈ Nodes"/>
 <org.eventb.core.guard name="=" org.eventb.core.label="grd2" org.eventb.core.predicate="sender ≠ receiver ∧ receiver ≠ transferNode"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="sender ↦ receiver ∈ LinkStateTable(sender)"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="receivedlinks ∈ Nodes ↔ Nodes ∧ dom(receivedlinks) = {transferNode}"/>
-<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="addlinks = receivedlinks"/>
 <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="removelinks = {transferNode} ◁ LinkStateTable(receiver)"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="TransmittedLink(sender↦receiver) ≔ TransmittedLink(sender↦receiver){transferNode↦∅}" org.eventb.core.label="act1"/>
-<org.eventb.core.parameter name="1" org.eventb.core.identifier="receivedlinks"/>
 <org.eventb.core.action name="5" org.eventb.core.assignment="TransmittedSeqNum(sender↦receiver) ≔ TransmittedSeqNum(sender↦receiver){transferNode↦0}" org.eventb.core.label="act2"/>
 <org.eventb.core.parameter name="&gt;" org.eventb.core.identifier="addlinks"/>
 <org.eventb.core.parameter name="?" org.eventb.core.identifier="removelinks"/>
-<org.eventb.core.parameter name="6" org.eventb.core.identifier="receivedTTL"/>
-<org.eventb.core.parameter name="7" org.eventb.core.identifier="receivedSeqNum"/>
-<org.eventb.core.guard name="8" org.eventb.core.label="grd7" org.eventb.core.predicate="receivedTTL &gt; 0 ∧ receivedSeqNum &gt;0"/>
-<org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="SeqNum(receiver)(transferNode) ≤ receivedSeqNum"/>
 <org.eventb.core.action name=":" org.eventb.core.assignment="TransmittedTTL(sender↦receiver) ≔ TransmittedTTL(sender↦receiver){transferNode↦0}" org.eventb.core.label="act3"/>
 <org.eventb.core.action name=";" org.eventb.core.assignment="Flag(receiver)≔Flag(receiver){transferNode↦FALSE}" org.eventb.core.label="act4"/>
 <org.eventb.core.guard name="@" org.eventb.core.label="grd9" org.eventb.core.predicate="addlinks=TransmittedLink(sender↦receiver)(transferNode)"/>
@@ -97,5 +91,22 @@
 <org.eventb.core.guard name="B" org.eventb.core.label="grd11" org.eventb.core.predicate="TransmittedTTL(sender↦receiver)(transferNode)&gt;0 ∧ TransmittedSeqNum(sender↦receiver)(transferNode)&gt;0"/>
 <org.eventb.core.guard name="C" org.eventb.core.label="grd12" org.eventb.core.predicate="Flag(receiver)(transferNode)=TRUE"/>
 <org.eventb.core.guard name="D" org.eventb.core.label="grd13" org.eventb.core.predicate="SeqNum(receiver)(transferNode)≤TransmittedSeqNum(sender↦receiver)(transferNode)"/>
+<org.eventb.core.action name="F" org.eventb.core.assignment="LinkStateTable(receiver) ≔ (LinkStateTable(receiver)∖removelinks) ∪ addlinks" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="G" org.eventb.core.assignment="InsertionTime(receiver) ≔ (removelinks ⩤ InsertionTime(receiver)) ∪ (addlinks × {Time})" org.eventb.core.label="act6"/>
+<org.eventb.core.witness name="J" org.eventb.core.label="receivedlinks" org.eventb.core.predicate="receivedlinks = TransmittedLink(sender↦receiver)(transferNode)"/>
+<org.eventb.core.witness name="K" org.eventb.core.label="receivedTTL" org.eventb.core.predicate="receivedTTL = TransmittedTTL(sender↦receiver)(transferNode)"/>
+<org.eventb.core.witness name="L" org.eventb.core.label="receivedSeqNum" org.eventb.core.predicate="receivedSeqNum = TransmittedSeqNum(sender↦receiver)(transferNode)"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="h" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cancleSendingLinks">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="sender∈Nodes"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="sender"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="transferNode"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="transferNode∈Nodes"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="transferNode∈dom(LinkStateTable(sender))"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="Flag(sender) ≔ Flag(sender){transferNode↦FALSE}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="i" org.eventb.core.label="inv7" org.eventb.core.predicate="∀m,n,p·TransmittedLink(m↦n)(p)≠∅ ∧ n≠p ⇒ TransmittedTTL(m↦n)(p)&gt;0 "/>
+<org.eventb.core.invariant name="j" org.eventb.core.label="inv8" org.eventb.core.predicate="∀l,p·l∈Nodes×Nodes ∧ TransmittedLink(l)(p)=∅ ⇒ TransmittedTTL(l)(p)=0"/>
+<org.eventb.core.invariant name="k" org.eventb.core.label="inv9" org.eventb.core.predicate="∀m,n,p·TransmittedLink(m↦n)(p)≠∅ ∧ n≠p ⇒ TransmittedSeqNum(m↦n)(p)&gt;0"/>
+<org.eventb.core.invariant name="l" org.eventb.core.label="inv10" org.eventb.core.predicate="∀l,p·l∈Nodes×Nodes ∧ TransmittedLink(l)(p)=∅ ⇒ TransmittedSeqNum(l)(p)=0"/>
 </org.eventb.core.machineFile>

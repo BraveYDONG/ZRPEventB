@@ -49,6 +49,10 @@
 <org.eventb.core.action name="/" org.eventb.core.assignment="BroadcastTime(node) ≔ Time" org.eventb.core.label="act2"/>
 <org.eventb.core.parameter name="0" org.eventb.core.identifier="rest"/>
 <org.eventb.core.refinesEvent name="1" org.eventb.core.target="updateLinks"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="node∈Nodes"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd6" org.eventb.core.predicate="addlinks∈Nodes↔Nodes"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="grd7" org.eventb.core.predicate="removelinks∈Nodes↔Nodes"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="LinkStateTable(node) ≔ (LinkStateTable(node)∖removelinks) ∪ addlinks" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="transferLinks">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="sender"/>
@@ -67,6 +71,8 @@
 <org.eventb.core.refinesEvent name="7" org.eventb.core.target="updateLinks"/>
 <org.eventb.core.parameter name="&gt;" org.eventb.core.identifier="addlinks"/>
 <org.eventb.core.parameter name="?" org.eventb.core.identifier="removelinks"/>
+<org.eventb.core.guard name="@" org.eventb.core.label="grd7" org.eventb.core.predicate="addlinks∈Nodes↔Nodes"/>
+<org.eventb.core.guard name="A" org.eventb.core.label="grd8" org.eventb.core.predicate="removelinks∈Nodes↔Nodes"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="refreshLinks">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="oldlinks"/>
@@ -78,6 +84,7 @@
 <org.eventb.core.refinesEvent name="-" org.eventb.core.target="updateLinks"/>
 <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="oldlinks ∈ ℙ(Nodes × Nodes)"/>
 <org.eventb.core.parameter name="/" org.eventb.core.identifier="node"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd3" org.eventb.core.predicate="node∈Nodes"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="timeClock">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="tick"/>

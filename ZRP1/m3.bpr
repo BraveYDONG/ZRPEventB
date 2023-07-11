@@ -627,19 +627,21 @@
 <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
 <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
 <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
-<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
-<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p7"/>
-<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p8"/>
-<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p35"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p14"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39"/>
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p30"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
-<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39"/>
-<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -655,7 +657,7 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))">
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))">
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
@@ -677,7 +679,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
@@ -686,10 +688,14 @@
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 <org.eventb.core.prIdent name="sender" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="removelinks∈Nodes ↔ Nodes">
+<org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.prIdent name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="receivedSeqNum&gt;0">
 <org.eventb.core.prIdent name="receivedSeqNum" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
@@ -741,7 +747,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink">
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
@@ -794,6 +800,10 @@
 <org.eventb.core.prIdent name="receiver" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="sender" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="addlinks∈Nodes ↔ Nodes">
+<org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.prIdent name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀n⦂Nodes·⊤⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
@@ -814,7 +824,7 @@
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
@@ -822,7 +832,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
@@ -4559,41 +4569,42 @@
 <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p28"/>
 <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
 <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p31"/>
-<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p26"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
-<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
-<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees m,n)" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p38">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p39">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p39,p40,p41">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ovr in (LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)" org.eventb.core.prHyps="p39">
-<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p43,p44">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p39"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p39" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p40,p41,p42">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ovr in (LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)" org.eventb.core.prHyps="p40">
-<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p43,p45">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p44,p45">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p40"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with oldlinks={x,y·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p9">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p49">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p46"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p44" org.eventb.core.prInfHyps="p47"/>
-<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p45" org.eventb.core.prInfHyps="p48"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p41,p44,p45"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with m=node" org.eventb.core.prGoal="p49" org.eventb.core.prHyps="p43">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p52">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p46" org.eventb.core.prInfHyps="p50"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p48" org.eventb.core.prInfHyps="p51"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p46,p48"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p52" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p54">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p50" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p53"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ovr in (LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)" org.eventb.core.prHyps="p41">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p44,p46">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p41"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with oldlinks={x,y·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p9">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p50">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p42" org.eventb.core.prInfHyps="p47"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p45" org.eventb.core.prInfHyps="p48"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p46" org.eventb.core.prInfHyps="p49"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p42,p45,p46"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with m=node" org.eventb.core.prGoal="p50" org.eventb.core.prHyps="p44">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p53">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p47" org.eventb.core.prInfHyps="p51"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p49" org.eventb.core.prInfHyps="p52"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p47,p49"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p53" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p55">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p51" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p54"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -4601,19 +4612,19 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p55,p56">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p40"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p56,p57">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p41"/>
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Functional image simplification in hyp" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p56" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p57"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p57"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p57" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p58"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p58"/>
 <org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p55" org.eventb.core.prHyps="p43" org.eventb.core.prInfHyps="p58"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p56" org.eventb.core.prHyps="p44" org.eventb.core.prInfHyps="p59"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p58" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p59"/>
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p59"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p59" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p60"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p60"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -4625,39 +4636,39 @@
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p55,p60">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p39"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ovr in (LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)" org.eventb.core.prHyps="p40">
-<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p43,p45">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p56,p61">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p40"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ovr in (LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)" org.eventb.core.prHyps="p41">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p44,p46">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p41"/>
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Functional image simplification in hyp" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p60" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p61"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p61"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p61" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p62"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p62"/>
 <org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p43" org.eventb.core.prHyps="p55" org.eventb.core.prInfHyps="p59"/>
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p59"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p44" org.eventb.core.prHyps="p56" org.eventb.core.prInfHyps="p60"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p60"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.0"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p55,p56">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p40"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p56,p57">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p41"/>
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Functional image simplification in hyp" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p60" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p61"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p61"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p61" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p62"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p62"/>
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Functional image simplification in hyp" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p56" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p57"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p57"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with oldlinks={x,y·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p9">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p49">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p46"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p57" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p58"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p58"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with oldlinks={x,y·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p9">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p50">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p42" org.eventb.core.prInfHyps="p47"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p42"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -4701,7 +4712,7 @@
 <org.eventb.core.prIdent name="lifetime" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="node" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="oldlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
@@ -4710,31 +4721,31 @@
 <org.eventb.core.prIdent name="RoutingTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="oldlinks={x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}"/>
-<org.eventb.core.prPred name="p55" org.eventb.core.predicate="¬m=node">
+<org.eventb.core.prPred name="p56" org.eventb.core.predicate="¬m=node">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p56" org.eventb.core.predicate="m ↦ n∈closure(({node} ⩤ LinkStateTable)(m))">
+<org.eventb.core.prPred name="p57" org.eventb.core.predicate="m ↦ n∈closure(({node} ⩤ LinkStateTable)(m))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p60" org.eventb.core.predicate="n∈dom(({node} ⩤ LinkStateTable)(m))">
+<org.eventb.core.prPred name="p61" org.eventb.core.predicate="n∈dom(({node} ⩤ LinkStateTable)(m))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧m ↦ n∈closure((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧(∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n))⇒¬(∀x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n))"/>
-<org.eventb.core.prPred name="p52" org.eventb.core.predicate="∃x⦂Nodes·¬(node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(node)⇔node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n))">
+<org.eventb.core.prPred name="p53" org.eventb.core.predicate="∃x⦂Nodes·¬(node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(node)⇔node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n))">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="LinkStateTable∈Nodes → (Nodes ↔ Nodes)"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒(∃q⦂Nodes,p⦂Nodes·¬(q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q)))">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="m ↦ n∈closure((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))">
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="m ↦ n∈closure((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="n∈dom(LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y})">
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="n∈dom(LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y})">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·a∈ℙ(Nodes)∧b∈ℙ(Nodes)∧f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
@@ -4742,29 +4753,29 @@
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="NeighborLink∈Nodes ↔ Nodes">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="m ↦ n∈closure(LinkStateTable(node) ∖ oldlinks)">
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="m ↦ n∈closure(LinkStateTable(node) ∖ oldlinks)">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p49" org.eventb.core.predicate="∃x⦂Nodes·¬(m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n))">
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="∃x⦂Nodes·¬(m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="⊤⇒⊤"/>
-<org.eventb.core.prPred name="p53" org.eventb.core.predicate="∃x⦂Nodes·node ↦ x∈LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}∧¬node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n)">
+<org.eventb.core.prPred name="p54" org.eventb.core.predicate="∃x⦂Nodes·node ↦ x∈LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}∧¬node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n)">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink">
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p57" org.eventb.core.predicate="m ↦ n∈closure(LinkStateTable(m))">
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="m ↦ n∈closure(LinkStateTable(m))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p50" org.eventb.core.predicate="∃x⦂Nodes·node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(node)∧¬node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n)">
+<org.eventb.core.prPred name="p51" org.eventb.core.predicate="∃x⦂Nodes·node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(node)∧¬node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n)">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m)∧m ↦ n∉NeighborLink∧m ↦ n∈DNeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
@@ -4774,11 +4785,11 @@
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∉LinkStateTable(m)∧m ↦ n∈NeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n)">
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n)">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="m ↦ n∈closure(LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y})">
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="m ↦ n∈closure(LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y})">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
@@ -4788,10 +4799,10 @@
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒BroadcastTime(n)≤Time">
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n)">
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n)">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
@@ -4799,22 +4810,22 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
-<org.eventb.core.prPred name="p51" org.eventb.core.predicate="node ↦ n∈closure(LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y})">
+<org.eventb.core.prPred name="p52" org.eventb.core.predicate="node ↦ n∈closure(LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y})">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="¬⊤"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="n∈dom((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧m ↦ n∈closure((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧(∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n))⇒(∃x⦂Nodes·¬(m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n)))">
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="¬⊤"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="n∈dom((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧m ↦ n∈closure((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧(∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n))⇒(∃x⦂Nodes·¬(m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n)))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p54" org.eventb.core.predicate="∃x⦂Nodes·¬(node ↦ x∈LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}⇔node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n))">
+<org.eventb.core.prPred name="p55" org.eventb.core.predicate="∃x⦂Nodes·¬(node ↦ x∈LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}⇔node ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ {x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}})(n))">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈NeighborLink)∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈DNeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
 <org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2">
@@ -4831,46 +4842,47 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="oldlinks∈ℙ(Nodes × Nodes)"/>
-<org.eventb.core.prPred name="p61" org.eventb.core.predicate="n∈dom(LinkStateTable(m))">
+<org.eventb.core.prPred name="p62" org.eventb.core.predicate="n∈dom(LinkStateTable(m))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p60" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="node∈Nodes"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="oldlinks={x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧x≠node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒(∃x⦂Nodes·¬(m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n)))"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="m=node">
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="m=node">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="n∈dom((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))">
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="n∈dom((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀n⦂Nodes·⊤⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))"/>
 <org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∃x⦂Nodes·¬(m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n))">
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="∃x⦂Nodes·¬(m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n))">
 <org.eventb.core.prIdent name="m" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="node∈dom(LinkStateTable)"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒¬(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧¬x=node⇒node∈dom(InsertionTime)∧InsertionTime∈Nodes ⇸ ℙ(Nodes × Nodes × ℤ)∧x ↦ y∈dom(InsertionTime(node))∧InsertionTime(node)∈Nodes × Nodes ⇸ ℤ"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="n∈dom(LinkStateTable(node) ∖ oldlinks)">
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="n∈dom(LinkStateTable(node) ∖ oldlinks)">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧m ↦ n∈closure((LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m))∧(∃x⦂Nodes·m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)∧¬m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n))⇒(∃x⦂Nodes·¬(m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(m)⇔m ↦ x∈(LinkStateTable{node ↦ LinkStateTable(node) ∖ oldlinks})(n)))"/>
-<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.funImgSimplifies:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.funOvr:1"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.funOvr:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="transferLinks/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Nodes">
 <org.eventb.core.lang name="L"/>
@@ -6859,19 +6871,21 @@
 <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
 <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
 <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
-<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
-<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p7"/>
-<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p8"/>
-<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p35"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p14"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39"/>
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p30"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
-<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39"/>
-<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -6887,7 +6901,7 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))">
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))">
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
@@ -6909,7 +6923,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
@@ -6918,10 +6932,14 @@
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 <org.eventb.core.prIdent name="sender" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="removelinks∈Nodes ↔ Nodes">
+<org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.prIdent name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="receivedSeqNum&gt;0">
 <org.eventb.core.prIdent name="receivedSeqNum" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
@@ -6973,7 +6991,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink">
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
@@ -7026,6 +7044,10 @@
 <org.eventb.core.prIdent name="receiver" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="sender" org.eventb.core.type="Nodes"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="addlinks∈Nodes ↔ Nodes">
+<org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.prIdent name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀n⦂Nodes·⊤⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
@@ -7046,7 +7068,7 @@
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
@@ -7054,7 +7076,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2">
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2">
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
 </org.eventb.core.prPred>
@@ -7354,20 +7376,23 @@
 <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p26" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27"/>
 <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
 <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31"/>
-<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
-<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p33"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE10" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p13"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p27"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
-<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
-<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with removelinks={p,m·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m}" org.eventb.core.prHyps="p9">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p38" org.eventb.core.prInfHyps="p39"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p38"/>
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p42"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p41"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -7389,7 +7414,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="node" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒RoutingTable(n)⊆Nodes × Nodes">
 <org.eventb.core.prIdent name="RoutingTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
@@ -7398,18 +7423,19 @@
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈NeighborLink)∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈DNeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
 <org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="rest={p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m} ⩤ InsertionTime(node)">
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="rest={p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m} ⩤ InsertionTime(node)">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="rest" org.eventb.core.type="ℙ(Nodes×Nodes×ℤ)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="addlinks={p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink∧¬p ↦ m∈LinkStateTable(p) ∣ p ↦ m}">
 <org.eventb.core.prIdent name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="removelinks∈Nodes ↔ Nodes"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒(∃q⦂Nodes,p⦂Nodes·¬(q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q)))"/>
@@ -7433,8 +7459,9 @@
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
 <org.eventb.core.prPred name="p27" org.eventb.core.predicate="⊤⇒⊤"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∉NeighborLink⇒p∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="node∈Nodes"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒(∃x⦂Nodes·¬(m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n)))">
 <org.eventb.core.prIdent name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
 </org.eventb.core.prPred>
@@ -7449,6 +7476,9 @@
 <org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∉LinkStateTable(m)∧m ↦ n∈NeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="addlinks∈Nodes ↔ Nodes">
+<org.eventb.core.prIdent name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀n⦂Nodes·⊤⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 </org.eventb.core.prPred>
@@ -7466,13 +7496,13 @@
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒¬(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))">
 <org.eventb.core.prIdent name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="rest=removelinks ⩤ InsertionTime(node)">
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="rest=removelinks ⩤ InsertionTime(node)">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="rest" org.eventb.core.type="ℙ(Nodes×Nodes×ℤ)"/>
 </org.eventb.core.prPred>
@@ -7699,20 +7729,23 @@
 <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p26" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27"/>
 <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
 <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31"/>
-<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
-<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p33"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE10" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p13"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p27"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
-<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
-<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with removelinks={p,m·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m}" org.eventb.core.prHyps="p9">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p38" org.eventb.core.prInfHyps="p39"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p38"/>
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p42"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p41"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -7734,7 +7767,7 @@
 <org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 <org.eventb.core.prIdent name="node" org.eventb.core.type="Nodes"/>
 <org.eventb.core.prIdent name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒RoutingTable(n)⊆Nodes × Nodes">
 <org.eventb.core.prIdent name="RoutingTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
@@ -7743,18 +7776,19 @@
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈NeighborLink)∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈DNeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
 <org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="rest={p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m} ⩤ InsertionTime(node)">
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="rest={p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m} ⩤ InsertionTime(node)">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="rest" org.eventb.core.type="ℙ(Nodes×Nodes×ℤ)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="addlinks={p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink∧¬p ↦ m∈LinkStateTable(p) ∣ p ↦ m}">
 <org.eventb.core.prIdent name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="removelinks∈Nodes ↔ Nodes"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒(∃q⦂Nodes,p⦂Nodes·¬(q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q)))"/>
@@ -7778,8 +7812,9 @@
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
 <org.eventb.core.prPred name="p27" org.eventb.core.predicate="⊤⇒⊤"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∉NeighborLink⇒p∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="node∈Nodes"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒(∃x⦂Nodes·¬(m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n)))">
 <org.eventb.core.prIdent name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
 </org.eventb.core.prPred>
@@ -7794,6 +7829,9 @@
 <org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∉LinkStateTable(m)∧m ↦ n∈NeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="addlinks∈Nodes ↔ Nodes">
+<org.eventb.core.prIdent name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀n⦂Nodes·⊤⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 </org.eventb.core.prPred>
@@ -7811,13 +7849,13 @@
 <org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
 <org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒¬(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))">
 <org.eventb.core.prIdent name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="rest=removelinks ⩤ InsertionTime(node)">
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="rest=removelinks ⩤ InsertionTime(node)">
 <org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
 <org.eventb.core.prIdent name="rest" org.eventb.core.type="ℙ(Nodes×Nodes×ℤ)"/>
 </org.eventb.core.prPred>
@@ -8759,5 +8797,195 @@
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="obtainLinks/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Nodes">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.prIdent name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒¬(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="obtainLinks/act3/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Nodes">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17,p18,p19"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in ¬(∀x·[[2]] ↦ x∈LinkStateTable([[2]])⇔[[2]] ↦ x∈LinkStateTable([[1]]))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in ¬(∀q,p·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in ¬(∀q,p·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p26" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p28"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p29"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p36" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p38"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p39"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE10" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p33"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p44"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p41" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with addlinks={p,m·p=node∧p ↦ m∈NeighborLink∧¬p ↦ m∈LinkStateTable(p) ∣ p ↦ m}" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p14">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p47">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with removelinks={p,m·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m}" org.eventb.core.prGoal="p47" org.eventb.core.prHyps="p15">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p50">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p48" org.eventb.core.prInfHyps="p49"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p48"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="2.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.prIdent name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.prIdent name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.prIdent name="node" org.eventb.core.type="Nodes"/>
+<org.eventb.core.prIdent name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒RoutingTable(n)⊆Nodes × Nodes">
+<org.eventb.core.prIdent name="RoutingTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="rest={p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m} ⩤ InsertionTime(node)">
+<org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.prIdent name="rest" org.eventb.core.type="ℙ(Nodes×Nodes×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink⇒p∈dom(LinkStateTable)∧⊤"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="∀n⦂Nodes,l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n))">
+<org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink)⇒(∃q⦂Nodes,p⦂Nodes·¬(q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q)))"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·a∈ℙ(Nodes)∧b∈ℙ(Nodes)∧f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="removelinks={p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∉NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m}"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·⊤∧⊤∧f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬node2=node">
+<org.eventb.core.prIdent name="node2" org.eventb.core.type="Nodes"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="NeighborLink∈Nodes ↔ Nodes"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="⊤⇒⊤"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∉NeighborLink⇒p∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="addlinks={p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink∧p ↦ m∉LinkStateTable(p) ∣ p ↦ m}"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink⇒p∈dom(LinkStateTable)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m)∧m ↦ n∉NeighborLink∧m ↦ n∈DNeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
+<org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∉LinkStateTable(m)∧m ↦ n∈NeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀n⦂Nodes·⊤⇒BroadcastTime(n)≤Time">
+<org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
+<org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="node2∈Nodes">
+<org.eventb.core.prIdent name="node2" org.eventb.core.type="Nodes"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒BroadcastTime(n)≤Time">
+<org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
+<org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="LinkStateTable=LinkStateTable{node ↦ (LinkStateTable(node) ∖ removelinks)∪addlinks}"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="removelinks={p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m}"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈NeighborLink)∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈DNeighborLink)⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))">
+<org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="∀n⦂Nodes·BroadcastTime(n)≤Time">
+<org.eventb.core.prIdent name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
+<org.eventb.core.prIdent name="Time" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="addlinks={p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink∧¬p ↦ m∈LinkStateTable(p) ∣ p ↦ m}"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="removelinks∈Nodes ↔ Nodes"/>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="LinkStateTable=LinkStateTable{node ↦ (LinkStateTable(node) ∖ {p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m})∪{p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink∧¬p ↦ m∈LinkStateTable(p) ∣ p ↦ m}}"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="node ↦ node2∈NeighborLink">
+<org.eventb.core.prIdent name="node2" org.eventb.core.type="Nodes"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="(∀m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m))∧(∀m⦂Nodes,n⦂Nodes·¬m ↦ n∈NeighborLink)∧(∀m⦂Nodes,n⦂Nodes·m ↦ n∈DNeighborLink)⇒(∃q⦂Nodes,p⦂Nodes·¬(q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q)))">
+<org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="DNeighborLink∈Nodes ↔ Nodes">
+<org.eventb.core.prIdent name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·⊤∧⊤∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="LinkStateTable=LinkStateTable{node ↦ (LinkStateTable(node) ∖ removelinks)∪{p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink∧¬p ↦ m∈LinkStateTable(p) ∣ p ↦ m}}"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="node∈Nodes"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧¬p ↦ m∈NeighborLink⇒p∈dom(LinkStateTable)"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒(∃x⦂Nodes·¬(m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n)))">
+<org.eventb.core.prIdent name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="node2∈Nodes∧node2≠node∧node ↦ node2∈NeighborLink">
+<org.eventb.core.prIdent name="node2" org.eventb.core.type="Nodes"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink⇒p∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∉NeighborLink⇒p∈dom(LinkStateTable)∧⊤"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="addlinks∈Nodes ↔ Nodes"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀n⦂Nodes·⊤⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))">
+<org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))">
+<org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1 ↦ node2∈NeighborLink⇒¬node1=node2"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒¬(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))">
+<org.eventb.core.prIdent name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="rest=removelinks ⩤ InsertionTime(node)">
+<org.eventb.core.prIdent name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.prIdent name="rest" org.eventb.core.type="ℙ(Nodes×Nodes×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

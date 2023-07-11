@@ -50,6 +50,10 @@
 <org.eventb.core.action name="2" org.eventb.core.assignment="SeqNum(node)≔SeqNum(node) {node2↦(SeqNum(node)(node2)+1)}" org.eventb.core.label="act4"/>
 <org.eventb.core.parameter name="3" org.eventb.core.identifier="node2"/>
 <org.eventb.core.guard name="4" org.eventb.core.label="grd5" org.eventb.core.predicate="node2∈Nodes ∧ node2≠node ∧ node↦node2 ∈ NeighborLink"/>
+<org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="node∈Nodes"/>
+<org.eventb.core.guard name="6" org.eventb.core.label="grd7" org.eventb.core.predicate="addlinks∈Nodes↔Nodes"/>
+<org.eventb.core.guard name="7" org.eventb.core.label="grd8" org.eventb.core.predicate="removelinks∈Nodes↔Nodes"/>
+<org.eventb.core.action name="8" org.eventb.core.assignment="LinkStateTable(node) ≔ (LinkStateTable(node)∖removelinks) ∪ addlinks" org.eventb.core.label="act5"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="transferLinks">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="transferLinks"/>
@@ -73,6 +77,8 @@
 <org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="SeqNum(receiver)(transferNode) ≤ receivedSeqNum"/>
 <org.eventb.core.action name=":" org.eventb.core.assignment="TTL(receiver) ≔ TTL(receiver)  {transferNode ↦ receivedTTL −1}" org.eventb.core.label="act3"/>
 <org.eventb.core.action name=";" org.eventb.core.assignment="SeqNum(receiver) ≔ SeqNum(receiver)  {transferNode ↦ receivedSeqNum}" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="@" org.eventb.core.label="grd9" org.eventb.core.predicate="addlinks∈Nodes↔Nodes"/>
+<org.eventb.core.guard name="A" org.eventb.core.label="grd10" org.eventb.core.predicate="removelinks∈Nodes↔Nodes"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="refreshLinks">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="refreshLinks"/>
