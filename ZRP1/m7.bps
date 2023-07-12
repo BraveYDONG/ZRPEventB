@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sourceForwardRequest/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sourceForwardRequest/grd12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sourceForwardRequest/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="8" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sourceForwardRequest/act6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendReply/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sendReply/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sendReply/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sendReply/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sendReply/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sendReply/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sendReply/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="receiveRequest_NoRoute/grd12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="13" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="receiveRequest_NoRoute/grd13/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="13" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="receiveRequest_NoRoute/grd10/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="13" org.eventb.core.psManual="true"/>
+</org.eventb.core.psFile>

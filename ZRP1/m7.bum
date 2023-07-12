@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m6"/>
+<org.eventb.core.seesContext name="&gt;" org.eventb.core.target="c3"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="NeighborLink"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="DNeighborLink"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="LinkStateTable"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="RoutingTable"/>
+<org.eventb.core.variable name="?" org.eventb.core.identifier="InsertionTime"/>
+<org.eventb.core.variable name="A" org.eventb.core.identifier="Time"/>
+<org.eventb.core.variable name="C" org.eventb.core.identifier="BroadcastTime"/>
+<org.eventb.core.variable name="N" org.eventb.core.identifier="TTL"/>
+<org.eventb.core.variable name="P" org.eventb.core.identifier="SeqNum"/>
+<org.eventb.core.variable name="[" org.eventb.core.identifier="TransmittedLink"/>
+<org.eventb.core.variable name="]" org.eventb.core.identifier="TransmittedSeqNum"/>
+<org.eventb.core.variable name="_" org.eventb.core.identifier="TransmittedTTL"/>
+<org.eventb.core.variable name="a" org.eventb.core.identifier="Flag"/>
+<org.eventb.core.variable name="p" org.eventb.core.identifier="RouteRequest"/>
+<org.eventb.core.variable name="r" org.eventb.core.identifier="IntendedNeighbor"/>
+<org.eventb.core.variable name="t" org.eventb.core.identifier="AccumulatedPath"/>
+<org.eventb.core.variable name="v" org.eventb.core.identifier="TransmittedTag"/>
+<org.eventb.core.variable name="x" org.eventb.core.identifier="TransmittedPath"/>
+<org.eventb.core.event name="y" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="ZoneCoverage ≔ Nodes × {(Nodes × Nodes) × {Nodes}}" org.eventb.core.label="act22"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="z" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Add_NewLink">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Add_NewLink"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="{" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Add_BrokenLink">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Add_BrokenLink"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="|" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Remove_Link">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Remove_Link"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="}" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="updateRoutingTable">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="updateRoutingTable"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="~" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stabilize">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="stabilize"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="''" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="obtainLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="obtainLinks"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'(" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="transferLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="transferLinks"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="')" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="refreshLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="refreshLinks"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="timeClock">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="timeClock"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="discardLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="discardLinks"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'," org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sendLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="sendLinks"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="receiveLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="receiveLinks"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="cancleSendingLinks">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="cancleSendingLinks"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sourceForwardRequest">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="sourceForwardRequest"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="source"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="destination"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="request"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="source∈Nodes∧destination∈Nodes"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="request=source↦destination"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="request∉RouteRequest"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="source≠destination"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="source↦destination∉closure(RoutingTable(source))"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="nodes={q∣source↦q∈LinkStateTable(source)∧(∃p,c·c⊆LinkStateTable(source)∧q↦p∈closure(c)∧card(c)=zoneRadius−1∧(∀s·s⊆LinkStateTable(source)∧q↦p∈closure(s)∧card(s)≥card(c)))}"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="nodes≠∅"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd8" org.eventb.core.predicate="links={p↦q∣p=source∧q∈Nodes}"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd9" org.eventb.core.predicate="∀l·l∈links⇒TransmittedTag(l)(request)=0"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd10" org.eventb.core.predicate="request∉dom(AccumulatedPath(source))"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="RouteRequest ≔ RouteRequest ∪ {request}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="AccumulatedPath ≔ AccumulatedPath{(source↦(AccumulatedPath(source)){request↦∅})}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="6" org.eventb.core.assignment="IntendedNeighbor ≔ IntendedNeighbor{(source↦request)↦nodes}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="7" org.eventb.core.assignment="TransmittedTag ≔ TransmittedTag(λl·l∈links∣TransmittedTag(l){request↦1})" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="8" org.eventb.core.assignment="TransmittedPath ≔ TransmittedPath(λl·l∈links∣TransmittedPath(l){request↦∅})" org.eventb.core.label="act5"/>
+<org.eventb.core.parameter name="9" org.eventb.core.identifier="nodes"/>
+<org.eventb.core.parameter name=":" org.eventb.core.identifier="links"/>
+<org.eventb.core.parameter name=";" org.eventb.core.identifier="zone"/>
+<org.eventb.core.guard name="=" org.eventb.core.label="grd11" org.eventb.core.predicate="zone={m∣source↦m∈closure(LinkStateTable(source))∨m=source}"/>
+<org.eventb.core.guard name="&gt;" org.eventb.core.label="grd12" org.eventb.core.predicate="source∉ZoneCoverage(source)(request)"/>
+<org.eventb.core.action name="?" org.eventb.core.assignment="ZoneCoverage(source)≔ZoneCoverage(source){request↦zone}" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sendReply">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="node"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="request"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="source"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="destination"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="path"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="zone"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="node ∈ Nodes"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="request ∈ RouteRequest"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="source = prj1(request) ∧ destination=prj2(request)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="request ∈ dom(AccumulatedPath(node))"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="path=AccumulatedPath(node)(request)"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="source↦destination∈closure(path)"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd7" org.eventb.core.predicate="zone={q∣node↦q∈closure(LinkStateTable(node)) ∨ q=node}"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="ZoneCoverage(node) ≔ ZoneCoverage(node){request↦zone}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="receiveRequest">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="receiveRequest"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="receiveRequest_NoRoute">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="receiveRequest_NoRoute"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="sender"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="receiver"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="request"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="sender∈Nodes ∧ receiver∈Nodes ∧ sender≠receiver"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="request∈RouteRequest"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="TransmittedTag(sender↦receiver)(request)=1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="request∉dom(AccumulatedPath(receiver))"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="nodes∈ℙ(Nodes)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="∀n·n∈dom(path)⇒¬n↦n∈closure(path)"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="AccumulatedPath(receiver)≔AccumulatedPath(receiver){request↦path}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="IntendedNeighbor≔IntendedNeighbor{(receiver↦request)↦nodes}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="TransmittedTag(sender↦receiver)≔TransmittedTag(sender↦receiver){request↦0}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="TransmittedPath(sender↦receiver)≔TransmittedPath(sender↦receiver){request↦∅}" org.eventb.core.label="act4"/>
+<org.eventb.core.parameter name="5" org.eventb.core.identifier="nodes"/>
+<org.eventb.core.parameter name="6" org.eventb.core.identifier="path"/>
+<org.eventb.core.parameter name="7" org.eventb.core.identifier="destination"/>
+<org.eventb.core.guard name="8" org.eventb.core.label="grd8" org.eventb.core.predicate="destination=prj2(request)"/>
+<org.eventb.core.guard name="9" org.eventb.core.label="grd9" org.eventb.core.predicate="receiver↦destination∉closure(LinkStateTable(receiver))"/>
+<org.eventb.core.guard name=";" org.eventb.core.label="grd11" org.eventb.core.predicate="nodes≠∅"/>
+<org.eventb.core.guard name="=" org.eventb.core.label="grd12" org.eventb.core.predicate="path=TransmittedPath(sender↦receiver)(request)∪{sender↦receiver}"/>
+<org.eventb.core.guard name="&gt;" org.eventb.core.label="grd13" org.eventb.core.predicate="nodes = {q∣receiver↦q∈LinkStateTable(receiver)∧(∃p,c·c⊆LinkStateTable(receiver)∧q↦p∈closure(c)∧card(c)=zoneRadius−1∧(∀s·s ⊆ LinkStateTable(receiver)∧q↦p∈closure(s)∧card(s)≥card(c))∧p∉ZoneCoverage(receiver)(request))∧q≠sender}"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="receiveRequest_HasRoute">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="receiveRequest_HasRoute"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="'4" org.eventb.core.identifier="ZoneCoverage"/>
+<org.eventb.core.invariant name="'5" org.eventb.core.label="inv1" org.eventb.core.predicate="ZoneCoverage ∈ Nodes → ((Nodes × Nodes) → ℙ(Nodes))"/>
+</org.eventb.core.machineFile>

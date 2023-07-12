@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poPredicate name="Nodet" org.eventb.core.predicate="finite(Nodes)" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#'"/>
+<org.eventb.core.poPredicate name="Nodeu" org.eventb.core.predicate="∀a⦂ℙ(Nodes),b⦂ℙ(Nodes),f⦂ℙ(Nodes×Nodes)·a∈ℙ(Nodes)∧b∈ℙ(Nodes)∧f∈a ↔ b⇒(finite(a)∧finite(b)⇒finite(f))" org.eventb.core.source="/ZRP1/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#)"/>
+<org.eventb.core.poIdentifier name="closure" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes)×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poPredicate name="closurf" org.eventb.core.predicate="closure∈(Nodes ↔ Nodes) → (Nodes ↔ Nodes)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="closurg" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·r⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="closurh" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);r⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="closuri" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes),s⦂ℙ(Nodes×Nodes)·r⊆s∧s;r⊆s⇒closure(r)⊆s" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="closurj" org.eventb.core.predicate="∀r⦂ℙ(Nodes×Nodes)·closure(r);closure(r)⊆closure(r)" org.eventb.core.source="/ZRP1/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#,"/>
+<org.eventb.core.poIdentifier name="lifetime" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="period" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="lifetimf" org.eventb.core.predicate="lifetime∈ℕ1" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="lifetimg" org.eventb.core.predicate="period∈ℕ1" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="lifetimh" org.eventb.core.predicate="lifetime&gt;period" org.eventb.core.source="/ZRP1/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#,"/>
+<org.eventb.core.poIdentifier name="zoneRadius" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="zoneRadiut" org.eventb.core.predicate="zoneRadius∈ℕ1" org.eventb.core.source="/ZRP1/c3.buc|org.eventb.core.contextFile#c3|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="AccumulatedPath" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="BroadcastTime" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
+<org.eventb.core.poIdentifier name="DNeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="Flag" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×BOOL))"/>
+<org.eventb.core.poIdentifier name="InsertionTime" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="IntendedNeighbor" org.eventb.core.type="ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes))"/>
+<org.eventb.core.poIdentifier name="LinkStateTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="NeighborLink" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="ReplyPath" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="ReplySender" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="RouteRequest" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="RoutingTable" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="SeqNum" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="TTL" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="Time" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TransmittedLink" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="TransmittedPath" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="TransmittedReplyPath" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="TransmittedSender" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="TransmittedSeqNum" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="TransmittedTTL" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="TransmittedTag" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="ZoneCoverage" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes)))"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPati" org.eventb.core.predicate="NeighborLink∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatj" org.eventb.core.predicate="DNeighborLink∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatk" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node1≠node2" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatl" org.eventb.core.predicate="∀node1⦂Nodes,node2⦂Nodes·node1∈Nodes∧node2∈Nodes∧node1 ↦ node2∈NeighborLink⇒node2 ↦ node1∈NeighborLink" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatm" org.eventb.core.predicate="NeighborLink∩DNeighborLink=(∅ ⦂ ℙ(Nodes×Nodes))" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatn" org.eventb.core.predicate="LinkStateTable∈Nodes → (Nodes ↔ Nodes)" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPato" org.eventb.core.predicate="RoutingTable∈Nodes → (Nodes ↔ Nodes)" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatp" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒RoutingTable(n)⊆Nodes × Nodes" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatq" org.eventb.core.predicate="InsertionTime∈Nodes → (Nodes × Nodes ⇸ ℕ)" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#@"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatr" org.eventb.core.predicate="Time∈ℕ1" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#B"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPats" org.eventb.core.predicate="BroadcastTime∈Nodes → ℕ1" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#D"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatt" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒(∀l⦂Nodes×Nodes·l∈LinkStateTable(n)⇔l∈dom(InsertionTime(n)))" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#E"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatu" org.eventb.core.predicate="∀n⦂Nodes·n∈Nodes⇒BroadcastTime(n)≤Time" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#F"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatv" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m)⇒m ↦ n∈NeighborLink∨m ↦ n∈DNeighborLink" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#G"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatw" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∈LinkStateTable(m)∧m ↦ n∉NeighborLink∧m ↦ n∈DNeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#H"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatx" org.eventb.core.predicate="∃m⦂Nodes,n⦂Nodes·m ↦ n∉LinkStateTable(m)∧m ↦ n∈NeighborLink⇒¬(∀q⦂Nodes,p⦂Nodes·q ↦ p∈NeighborLink⇔q ↦ p∈LinkStateTable(q))" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#I"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPaty" org.eventb.core.predicate="TTL∈Nodes → (Nodes → ℕ)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#O"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPatz" org.eventb.core.predicate="SeqNum∈Nodes → (Nodes → ℕ)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#Q"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPat{" org.eventb.core.predicate="∀m⦂Nodes,p⦂Nodes·p∈dom(LinkStateTable(m))⇒SeqNum(m)(p)&gt;0" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#R"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPat|" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·n∈dom(LinkStateTable(m))∧m ↦ n∈closure(LinkStateTable(m))∧(∃x⦂Nodes·m ↦ x∈LinkStateTable(m)∧¬m ↦ x∈LinkStateTable(n))⇒¬(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#S"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPat}" org.eventb.core.predicate="TransmittedLink∈Nodes × Nodes → (Nodes → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#\\"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPat~" org.eventb.core.predicate="TransmittedSeqNum∈Nodes × Nodes → (Nodes → ℕ)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#^"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau'" org.eventb.core.predicate="TransmittedTTL∈Nodes × Nodes → (Nodes → ℕ)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#`"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau(" org.eventb.core.predicate="Flag∈Nodes → (Nodes → BOOL)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#b"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau)" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes,p⦂Nodes·TransmittedLink(m ↦ n)(p)≠(∅ ⦂ ℙ(Nodes×Nodes))∧n≠p⇒m ↦ n∈LinkStateTable(m)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#c"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau*" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes,p⦂Nodes·TransmittedLink(m ↦ n)(p)≠(∅ ⦂ ℙ(Nodes×Nodes))∧n≠p⇒dom(TransmittedLink(m ↦ n)(p))={p}" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#d"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau+" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes,p⦂Nodes·TransmittedLink(m ↦ n)(p)≠(∅ ⦂ ℙ(Nodes×Nodes))∧n≠p⇒TransmittedTTL(m ↦ n)(p)&gt;0" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#i"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau," org.eventb.core.predicate="∀l⦂Nodes×Nodes,p⦂Nodes·l∈Nodes × Nodes∧TransmittedLink(l)(p)=(∅ ⦂ ℙ(Nodes×Nodes))⇒TransmittedTTL(l)(p)=0" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#j"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau-" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes,p⦂Nodes·TransmittedLink(m ↦ n)(p)≠(∅ ⦂ ℙ(Nodes×Nodes))∧n≠p⇒TransmittedSeqNum(m ↦ n)(p)&gt;0" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#k"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau." org.eventb.core.predicate="∀l⦂Nodes×Nodes,p⦂Nodes·l∈Nodes × Nodes∧TransmittedLink(l)(p)=(∅ ⦂ ℙ(Nodes×Nodes))⇒TransmittedSeqNum(l)(p)=0" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#l"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau/" org.eventb.core.predicate="RouteRequest∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#q"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau0" org.eventb.core.predicate="IntendedNeighbor∈Nodes × (Nodes × Nodes) → ℙ(Nodes)" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#s"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau1" org.eventb.core.predicate="AccumulatedPath∈Nodes → (Nodes × Nodes ⇸ (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#u"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau2" org.eventb.core.predicate="TransmittedTag∈Nodes × Nodes → (Nodes × Nodes → ℕ)" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#w"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau3" org.eventb.core.predicate="TransmittedPath∈Nodes × Nodes → (Nodes × Nodes → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#y"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau4" org.eventb.core.predicate="∀s⦂Nodes,d⦂Nodes·s∈Nodes∧d∈Nodes∧s ↦ d∈RouteRequest⇒s≠d" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#z"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau5" org.eventb.core.predicate="∀s⦂Nodes,n⦂Nodes·s∈Nodes∧n∈Nodes∧s≠n⇒(∀r⦂Nodes×Nodes·s=(prj1 ⦂ ℙ(Nodes×Nodes×Nodes))(r)∧r∈dom(AccumulatedPath(n))⇒r∈dom(AccumulatedPath(s)))" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#{"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau6" org.eventb.core.predicate="∀n⦂Nodes,m⦂Nodes,r⦂Nodes×Nodes·n≠m∧TransmittedPath(n ↦ m)(r)≠(∅ ⦂ ℙ(Nodes×Nodes))⇒r∈dom(AccumulatedPath(n))" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#~"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau7" org.eventb.core.predicate="∀n⦂Nodes,m⦂Nodes,r⦂Nodes×Nodes,path⦂ℙ(Nodes×Nodes)·n≠m∧m∈IntendedNeighbor(n ↦ r)⇒(r ↦ path∈AccumulatedPath(n)∧TransmittedTag(n ↦ m)(r)≠0⇒TransmittedPath(n ↦ m)(r)=path)" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#''"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau8" org.eventb.core.predicate="∀n⦂Nodes,m⦂Nodes,r⦂Nodes×Nodes·n≠m∧TransmittedTag(n ↦ m)(r)≠0⇒m∈IntendedNeighbor(n ↦ r)" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#'("/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau9" org.eventb.core.predicate="∀l⦂Nodes×Nodes,r⦂Nodes×Nodes·l∈Nodes × Nodes∧TransmittedTag(l)(r)=0⇒TransmittedPath(l)(r)=(∅ ⦂ ℙ(Nodes×Nodes))" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#')"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau:" org.eventb.core.predicate="∀n⦂Nodes,r⦂Nodes×Nodes·n∈Nodes∧r∈RouteRequest∧r∈dom(AccumulatedPath(n))⇒AccumulatedPath(n)(r)∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#'*"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau;" org.eventb.core.predicate="∀n⦂Nodes,s⦂Nodes,t⦂Nodes·n∈Nodes∧s ↦ t∈Nodes × Nodes∧s ↦ t∈dom(AccumulatedPath(n))⇒(∀m⦂Nodes,path⦂ℙ(Nodes×Nodes)·path=AccumulatedPath(n)(s ↦ t)∧m∈dom(path)⇒¬m ↦ m∈closure(path))" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#'+"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau=" org.eventb.core.predicate="∀s⦂Nodes,n⦂Nodes·s∈Nodes∧n∈Nodes∧s≠n⇒(∀r⦂Nodes×Nodes,path⦂ℙ(Nodes×Nodes)·r∈RouteRequest∧r ↦ path∈AccumulatedPath(n)∧s=(prj1 ⦂ ℙ(Nodes×Nodes×Nodes))(r)⇒s ↦ n∈closure(path))" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.invariant#'3"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau&gt;" org.eventb.core.predicate="∀s⦂Nodes,t⦂Nodes,n⦂Nodes·s ↦ t∈RouteRequest∧n∈Nodes∧s≠n⇒(∀r⦂Nodes×Nodes,path⦂ℙ(Nodes×Nodes)·r=s ↦ t∧r ↦ path∈AccumulatedPath(n)∧n ↦ t∈closure(path)⇒s ↦ t∈closure(path))" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.invariant#'4"/>
+<org.eventb.core.poPredicate name="TransmittedReplyPau?" org.eventb.core.predicate="ZoneCoverage∈Nodes → (Nodes × Nodes → ℙ(Nodes))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.invariant#'5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂Nodes,m⦂Nodes,r⦂Nodes×Nodes·(n≠m⇒n ↦ m∈dom(TransmittedReplyPath)∧TransmittedReplyPath∈Nodes × Nodes ⇸ ℙ(Nodes × Nodes × ℙ(Nodes × Nodes))∧r∈dom(TransmittedReplyPath(n ↦ m))∧TransmittedReplyPath(n ↦ m)∈Nodes × Nodes ⇸ ℙ(Nodes × Nodes))∧(n≠m∧TransmittedReplyPath(n ↦ m)(r)≠(∅ ⦂ ℙ(Nodes×Nodes))⇒n ↦ m∈dom(TransmittedSender)∧TransmittedSender∈Nodes × Nodes ⇸ ℙ(Nodes × (Nodes × Nodes)))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'Q"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'Q"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcd"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂Nodes,s⦂Nodes,d⦂Nodes,rq⦂Nodes×Nodes,path⦂ℙ(Nodes×Nodes)·(n∈Nodes∧s∈Nodes∧d∈Nodes∧rq=s ↦ d⇒n∈dom(ReplyPath)∧ReplyPath∈Nodes ⇸ ℙ(Nodes × (Nodes × Nodes) × ℙ(Nodes × Nodes))∧s ↦ rq∈dom(ReplyPath(n))∧ReplyPath(n)∈Nodes × (Nodes × Nodes) ⇸ ℙ(Nodes × Nodes))∧(n∈Nodes∧s∈Nodes∧d∈Nodes∧rq=s ↦ d∧path=ReplyPath(n)(s ↦ rq)∧path≠(∅ ⦂ ℙ(Nodes×Nodes))⇒path∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'R"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'R"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcd"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPati"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × {Nodes × (Nodes × Nodes)}∈Nodes → (Nodes ↔ Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'M"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#y"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'M"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPati"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × {Nodes × (Nodes × Nodes) × {Nodes × Nodes}}∈Nodes → (Nodes × (Nodes × Nodes) → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'N"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#y"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'N"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPati"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × Nodes × {Nodes × (Nodes × Nodes)}∈Nodes × Nodes → (Nodes ↔ Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'O"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#y"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'O"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPati"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Nodes × Nodes × {Nodes × Nodes × {Nodes × Nodes}}∈Nodes × Nodes → (Nodes × Nodes → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'P"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#y"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'P"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPati"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂Nodes,m⦂Nodes,r⦂Nodes×Nodes·n≠m∧(Nodes × Nodes × {Nodes × Nodes × {Nodes × Nodes}})(n ↦ m)(r)≠(∅ ⦂ ℙ(Nodes×Nodes))⇒n ↦ r∈(Nodes × Nodes × {Nodes × (Nodes × Nodes)})(n ↦ m)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'Q"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#y"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'Q"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcd|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPati"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂Nodes,s⦂Nodes,d⦂Nodes,rq⦂Nodes×Nodes,path⦂ℙ(Nodes×Nodes)·n∈Nodes∧s∈Nodes∧d∈Nodes∧rq=s ↦ d∧path=(Nodes × {Nodes × (Nodes × Nodes) × {Nodes × Nodes}})(n)(s ↦ rq)∧path≠(∅ ⦂ ℙ(Nodes×Nodes))⇒s ↦ d∈closure(path)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'R"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#y"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'R"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPati" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="TransmittedSeqNum'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="DNeighborLink'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="LinkStateTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="TransmittedSender'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="NeighborLink'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="Flag'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×BOOL))"/>
+<org.eventb.core.poIdentifier name="TTL'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="RouteRequest'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="Time'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AccumulatedPath'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="ReplySender'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="SeqNum'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="ReplyPath'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="BroadcastTime'" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
+<org.eventb.core.poIdentifier name="TransmittedReplyPath'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="TransmittedPath'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="ZoneCoverage'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes)))"/>
+<org.eventb.core.poIdentifier name="TransmittedLink'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="InsertionTime'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="RoutingTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="IntendedNeighbor'" org.eventb.core.type="ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes))"/>
+<org.eventb.core.poIdentifier name="TransmittedTag'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="TransmittedTTL'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPati" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPati" org.eventb.core.poStamp="12"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatj" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="node1" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="NeighborLink'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="node2" org.eventb.core.type="Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatj" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatj" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="node1∈Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="node2∈Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#3|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="node1≠node2" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#3|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="node1 ↦ node2∉NeighborLink∧node2 ↦ node1∉NeighborLink" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="node1 ↦ node2∉DNeighborLink∧node2 ↦ node1∉DNeighborLink" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#3|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatk" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="DNeighborLink'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="node1" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="NeighborLink'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="node2" org.eventb.core.type="Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatk" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatk" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="node1∈Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="node2∈Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#4|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="node1≠node2" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#4|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="node1 ↦ node2∉NeighborLink∧node2 ↦ node1∉NeighborLink" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#4|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="node1 ↦ node2∈DNeighborLink∧node2 ↦ node1∈DNeighborLink" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#4|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatl" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="DNeighborLink'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="node1" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="NeighborLink'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="node2" org.eventb.core.type="Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatl" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatl" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="node1∈Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="node2∈Nodes" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="node1≠node2" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="node1 ↦ node2∈NeighborLink∧node2 ↦ node1∈NeighborLink" org.eventb.core.source="/ZRP1/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatm" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="node" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="RoutingTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatm" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatm" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="node∈Nodes" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="addRoutes∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="removeRoutes∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="¬(addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∧removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes)))" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="updateRoutingTable_IARP/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="node∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)∧LinkStateTable(node)∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_IARP/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂Nodes,q⦂Nodes·p ↦ q∈Nodes × Nodes⇒node∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_IARP/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀m⦂Nodes·node∈dom(LinkStateTable)∧LinkStateTable∈Nodes ⇸ ℙ(Nodes × Nodes)∧LinkStateTable(node)∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)∧(node ↦ m∉closure(LinkStateTable(node))⇒node∈dom(RoutingTable)∧RoutingTable∈Nodes ⇸ ℙ(Nodes × Nodes)∧RoutingTable(node)∈dom(closure)∧(node ↦ m∈closure(RoutingTable(node))⇒(∀c⦂ℙ(Nodes×Nodes)·c⊆RoutingTable(node)⇒c∈dom(closure)∧(node ↦ m∈closure(c)⇒finite(c)))))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_IARP/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="node∈dom(RoutingTable)∧RoutingTable∈Nodes ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_IARP/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="nodes≠(∅ ⦂ ℙ(Nodes))∨(node∈dom(RoutingTable)∧RoutingTable∈Nodes ⇸ ℙ(Nodes × Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatn" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="node" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="zone" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="RoutingTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPatn+" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatn" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="node∈Nodes" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#internal1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="addRoutes∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#internal2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="removeRoutes∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#internal3"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="¬(addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∧removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes)))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#internal4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPatn," org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="zone={m⦂Nodes·node ↦ m∈closure(LinkStateTable(node))∨m=node ∣ m}" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPatn-" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="addRoutes={p⦂Nodes,q⦂Nodes·p ↦ q∈Nodes × Nodes∧p ↦ q∈LinkStateTable(node) ∣ p ↦ q}" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPatn." org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="nodes={m⦂Nodes·node ↦ m∉closure(LinkStateTable(node))∧node ↦ m∈closure(RoutingTable(node))∧(∃c⦂ℙ(Nodes×Nodes)·c⊆RoutingTable(node)∧node ↦ m∈closure(c)∧card(c)≤zoneRadius) ∣ m}" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPatn/" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn." org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="removeRoutes=(nodes∪zone) ◁ RoutingTable(node) ▷ (nodes∪zone)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatn" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPatn\/" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="nodes≠(∅ ⦂ ℙ(Nodes))∨¬addRoutes=zone ◁ RoutingTable(node) ▷ zone" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'S|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="sender ↦ receiver∈dom(TransmittedSender)∧TransmittedSender∈Nodes × Nodes ⇸ ℙ(Nodes × (Nodes × Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="path≠(∅ ⦂ ℙ(Nodes×Nodes))⇒sender ↦ receiver∈dom(TransmittedReplyPath)∧TransmittedReplyPath∈Nodes × Nodes ⇸ ℙ(Nodes × Nodes × ℙ(Nodes × Nodes))∧request∈dom(TransmittedReplyPath(sender ↦ receiver))∧TransmittedReplyPath(sender ↦ receiver)∈Nodes × Nodes ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="path∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#7"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="path∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/grd11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂Nodes·p∈dom(path)⇒path∈dom(closure)∧closure∈ℙ(Nodes × Nodes) ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/grd12/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="receiver∈dom(RoutingTable)∧RoutingTable∈Nodes ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#:"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ReplySender{receiver ↦ ReplySender(receiver)∪{sender ↦ request}}∈Nodes → (Nodes ↔ Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'M"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'M"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ReplyPath{receiver ↦ ReplyPath(receiver){sender ↦ request ↦ path}}∈Nodes → (Nodes × (Nodes × Nodes) → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'N"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'N"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TransmittedSender{sender ↦ receiver ↦ TransmittedSender(sender ↦ receiver) ∖ {sender ↦ request}}∈Nodes × Nodes → (Nodes ↔ Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'O"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'O"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TransmittedReplyPath{sender ↦ receiver ↦ TransmittedReplyPath(sender ↦ receiver){request ↦ (∅ ⦂ ℙ(Nodes×Nodes))}}∈Nodes × Nodes → (Nodes × Nodes → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'P"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'P"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂Nodes,m⦂Nodes,r⦂Nodes×Nodes·n≠m∧(TransmittedReplyPath{sender ↦ receiver ↦ TransmittedReplyPath(sender ↦ receiver){request ↦ (∅ ⦂ ℙ(Nodes×Nodes))}})(n ↦ m)(r)≠(∅ ⦂ ℙ(Nodes×Nodes))⇒n ↦ r∈(TransmittedSender{sender ↦ receiver ↦ TransmittedSender(sender ↦ receiver) ∖ {sender ↦ request}})(n ↦ m)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'Q"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'Q"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcd|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂Nodes,s⦂Nodes,d⦂Nodes,rq⦂Nodes×Nodes,path0⦂ℙ(Nodes×Nodes)·n∈Nodes∧s∈Nodes∧d∈Nodes∧rq=s ↦ d∧path0=(ReplyPath{receiver ↦ ReplyPath(receiver){sender ↦ request ↦ path}})(n)(s ↦ rq)∧path0≠(∅ ⦂ ℙ(Nodes×Nodes))⇒s ↦ d∈closure(path0)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'R"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'R"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="¬(addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∧removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes)))" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/grd4\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="receiver∈dom(RoutingTable)∧RoutingTable∈Nodes ⇸ ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#="/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#="/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="receiver∈dom(ReplySender)∧ReplySender∈Nodes ⇸ ℙ(Nodes × (Nodes × Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#&gt;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/act4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="receiver∈dom(ReplyPath)∧ReplyPath∈Nodes ⇸ ℙ(Nodes × (Nodes × Nodes) × ℙ(Nodes × Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#?"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/act5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="sender ↦ receiver∈dom(TransmittedSender)∧TransmittedSender∈Nodes × Nodes ⇸ ℙ(Nodes × (Nodes × Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/act6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="sender ↦ receiver∈dom(TransmittedReplyPath)∧TransmittedReplyPath∈Nodes × Nodes ⇸ ℙ(Nodes × Nodes × ℙ(Nodes × Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.action#A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="updateRoutingTable_Reply/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTALLHYPTransmittedReplyPato"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="RoutingTable{receiver ↦ (RoutingTable(receiver) ∖ removeRoutes)∪addRoutes}=RoutingTable{node ↦ (RoutingTable(node) ∖ removeRoutes)∪addRoutes}" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.action#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ZRP1/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#9|org.eventb.core.action#."/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poSequent#updateRoutingTable_Reply\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPato" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="TransmittedSender'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="path" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="node" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="ReplySender'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="ReplyPath'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="removeRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="receiver" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="TransmittedReplyPath'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="RoutingTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="addRoutes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="request" org.eventb.core.type="Nodes×Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPato+" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPato" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="addRoutes∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="removeRoutes∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sender∈Nodes∧receiver∈Nodes" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="¬addRoutes=(∅ ⦂ ℙ(Nodes×Nodes))∧removeRoutes=(∅ ⦂ ℙ(Nodes×Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPato," org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato+" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="sender ↦ request∈TransmittedSender(sender ↦ receiver)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPato-" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato," org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="path≠(∅ ⦂ ℙ(Nodes×Nodes))∧path=TransmittedReplyPath(sender ↦ receiver)(request)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPato." org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato-" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="request∈closure(path)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPato/" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato." org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="receiver∈dom(path) ∖ {p⦂Nodes·sender ↦ p∈closure(path)∨p=sender ∣ p}" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPTransmittedReplyPato0" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato\/" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="addRoutes={p⦂Nodes·p∈dom(path)∧p ↦ receiver∈closure(path) ∣ p} ⩤ path" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#9"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPato" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTHYPTransmittedReplyPato0" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="¬addRoutes⊆RoutingTable(receiver)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#:"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="node∈Nodes" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#'T|org.eventb.core.guard#D"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatp" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="nodes" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatp" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatp" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="nodes∈Nodes → ℙ(Nodes)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#I|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·m ↦ n∈NeighborLink⇔m ↦ n∈LinkStateTable(m)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#I|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀m⦂Nodes,n⦂Nodes·m ↦ n∈closure(NeighborLink)∧n∈nodes(m)⇒(∀x⦂Nodes·m ↦ x∈LinkStateTable(m)⇔m ↦ x∈LinkStateTable(n))" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#I|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="nodes=(λx⦂Nodes·x∈Nodes ∣ dom(LinkStateTable(x)))" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#I|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀x⦂Nodes,y⦂Nodes·x∈Nodes∧y∈nodes(x)⇒x ↦ y∈closure(LinkStateTable(x))" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#I|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatq" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="LinkStateTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="node" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="node2" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="TTL'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="rest" org.eventb.core.type="ℙ(Nodes×Nodes×ℤ)"/>
+<org.eventb.core.poIdentifier name="SeqNum'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="BroadcastTime'" org.eventb.core.type="ℙ(Nodes×ℤ)"/>
+<org.eventb.core.poIdentifier name="InsertionTime'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatq" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatq" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="addlinks={p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∈NeighborLink∧p ↦ m∉LinkStateTable(p) ∣ p ↦ m}" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="removelinks={p⦂Nodes,m⦂Nodes·p=node∧p ↦ m∉NeighborLink∧p ↦ m∈LinkStateTable(p) ∣ p ↦ m}" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Time − BroadcastTime(node)≥period" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="rest=removelinks ⩤ InsertionTime(node)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="node2∈Nodes∧node2≠node∧node ↦ node2∈NeighborLink" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#4"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="node∈Nodes" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#5"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="addlinks∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#6"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="removelinks∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#J|org.eventb.core.guard#7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatr" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="LinkStateTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="transferNode" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="TTL'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="SeqNum'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="receivedSeqNum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="receiver" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="receivedTTL" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="receivedlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="InsertionTime'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatr" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatr" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes∧receiver∈Nodes∧transferNode∈Nodes" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#4"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="sender≠receiver∧receiver≠transferNode" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#="/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sender ↦ receiver∈LinkStateTable(sender)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="receivedlinks∈Nodes ↔ Nodes∧dom(receivedlinks)={transferNode}" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="addlinks=receivedlinks" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="removelinks={transferNode} ◁ LinkStateTable(receiver)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="receivedTTL&gt;0∧receivedSeqNum&gt;0" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#8"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="SeqNum(receiver)(transferNode)≤receivedSeqNum" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#9"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="addlinks∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#@"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="removelinks∈Nodes ↔ Nodes" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#K|org.eventb.core.guard#A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPats" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="LinkStateTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="node" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="oldlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="InsertionTime'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPats" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPats" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="oldlinks={x⦂Nodes,y⦂Nodes·x ↦ y∈LinkStateTable(node)∧x≠node∧Time − InsertionTime(node)(x ↦ y)≥lifetime ∣ x ↦ y}" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#L|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="oldlinks∈ℙ(Nodes × Nodes)" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#L|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="node∈Nodes" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#L|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatt" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="Time'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tick" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatt" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatt" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tick∈ℕ1" org.eventb.core.source="/ZRP1/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#M|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatu" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="transferNode" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="receivedSeqNum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="receiver" org.eventb.core.type="Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatu" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatu" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes∧receiver∈Nodes∧transferNode∈Nodes" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#T|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="sender≠receiver∧receiver≠transferNode" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#T|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sender ↦ receiver∈LinkStateTable(sender)" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#T|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="SeqNum(receiver)(transferNode)&gt;receivedSeqNum" org.eventb.core.source="/ZRP1/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#T|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatv" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="TransmittedSeqNum'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="transferNode" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="Flag'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×BOOL))"/>
+<org.eventb.core.poIdentifier name="links" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="TransmittedLink'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="TransmittedTTL'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatv" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatv" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#e|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="transferNode∈Nodes" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#e|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="transferNode∈dom(LinkStateTable(sender))" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#e|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="links={x⦂Nodes,y⦂Nodes·x=sender∧x ↦ y∈LinkStateTable(x) ∣ x ↦ y}" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#e|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀l⦂Nodes×Nodes·l∈links⇒TransmittedLink(l)(transferNode)=(∅ ⦂ ℙ(Nodes×Nodes))" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#e|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TTL(sender)(transferNode)&gt;0" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#e|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatw" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="TransmittedSeqNum'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="LinkStateTable'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="transferNode" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="Flag'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×BOOL))"/>
+<org.eventb.core.poIdentifier name="addlinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="removelinks" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="receiver" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="TransmittedLink'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="InsertionTime'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="TransmittedTTL'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatw" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatw" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes∧receiver∈Nodes∧transferNode∈Nodes" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#4"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="sender≠receiver∧receiver≠transferNode" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#="/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="removelinks={transferNode} ◁ LinkStateTable(receiver)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="addlinks=TransmittedLink(sender ↦ receiver)(transferNode)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#@"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="TransmittedLink(sender ↦ receiver)(transferNode)≠(∅ ⦂ ℙ(Nodes×Nodes))" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#A"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TransmittedTTL(sender ↦ receiver)(transferNode)&gt;0∧TransmittedSeqNum(sender ↦ receiver)(transferNode)&gt;0" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#B"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="Flag(receiver)(transferNode)=TRUE" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#C"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="SeqNum(receiver)(transferNode)≤TransmittedSeqNum(sender ↦ receiver)(transferNode)" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#f|org.eventb.core.guard#D"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatx" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="transferNode" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="Flag'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×BOOL))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatx" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatx" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#h|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="transferNode∈Nodes" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#h|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="transferNode∈dom(LinkStateTable(sender))" org.eventb.core.source="/ZRP1/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#h|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPaty" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="links" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="RouteRequest'" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="source" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="AccumulatedPath'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="zone" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="TransmittedPath'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="ZoneCoverage'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes)))"/>
+<org.eventb.core.poIdentifier name="IntendedNeighbor'" org.eventb.core.type="ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes))"/>
+<org.eventb.core.poIdentifier name="TransmittedTag'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="request" org.eventb.core.type="Nodes×Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPaty" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPaty" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="source∈Nodes∧destination∈Nodes" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="request=source ↦ destination" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="request∉RouteRequest" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="source≠destination" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="source ↦ destination∉closure(RoutingTable(source))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="nodes={q⦂Nodes·source ↦ q∈LinkStateTable(source)∧(∃p⦂Nodes,c⦂ℙ(Nodes×Nodes)·c⊆LinkStateTable(source)∧q ↦ p∈closure(c)∧card(c)=zoneRadius − 1∧(∀s⦂ℙ(Nodes×Nodes)·s⊆LinkStateTable(source)∧q ↦ p∈closure(s)∧card(s)≥card(c))) ∣ q}" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="nodes≠(∅ ⦂ ℙ(Nodes))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="links={p⦂Nodes,q⦂Nodes·p=source∧q∈Nodes ∣ p ↦ q}" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#1"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀l⦂Nodes×Nodes·l∈links⇒TransmittedTag(l)(request)=0" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#2"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="request∉dom(AccumulatedPath(source))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#3"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="zone={m⦂Nodes·source ↦ m∈closure(LinkStateTable(source))∨m=source ∣ m}" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#="/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="source∉ZoneCoverage(source)(request)" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'3|org.eventb.core.guard#&gt;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPatz" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="path" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="node" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="source" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="zone" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="ZoneCoverage'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes)))"/>
+<org.eventb.core.poIdentifier name="request" org.eventb.core.type="Nodes×Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPatz" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPatz" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="node∈Nodes" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'6|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="request∈RouteRequest" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'6|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="source=(prj1 ⦂ ℙ(Nodes×Nodes×Nodes))(request)∧destination=(prj2 ⦂ ℙ(Nodes×Nodes×Nodes))(request)" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'6|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="request∈dom(AccumulatedPath(node))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'6|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="path=AccumulatedPath(node)(request)" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'6|org.eventb.core.guard#1"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="source ↦ destination∈closure(path)" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'6|org.eventb.core.guard#2"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="zone={q⦂Nodes·node ↦ q∈closure(LinkStateTable(node))∨q=node ∣ q}" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'6|org.eventb.core.guard#3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPat{" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="path" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="AccumulatedPath'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="receiver" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="TransmittedPath'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="IntendedNeighbor'" org.eventb.core.type="ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes))"/>
+<org.eventb.core.poIdentifier name="TransmittedTag'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="request" org.eventb.core.type="Nodes×Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPat{" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPat{" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes∧receiver∈Nodes∧sender≠receiver" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#}|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="request∈RouteRequest" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#}|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TransmittedTag(sender ↦ receiver)(request)=1" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#}|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="request∉dom(AccumulatedPath(receiver))" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#}|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="nodes∈ℙ(Nodes)" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#}|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="path∈Nodes ↔ Nodes∧sender ↦ receiver∈path" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#}|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀n⦂Nodes·n∈dom(path)⇒¬n ↦ n∈closure(path)" org.eventb.core.source="/ZRP1/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#}|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPat|" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="path" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="AccumulatedPath'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="receiver" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="TransmittedPath'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="IntendedNeighbor'" org.eventb.core.type="ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes))"/>
+<org.eventb.core.poIdentifier name="TransmittedTag'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="request" org.eventb.core.type="Nodes×Nodes"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPat|" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPat\|" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes∧receiver∈Nodes∧sender≠receiver" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="request∈RouteRequest" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TransmittedTag(sender ↦ receiver)(request)=1" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="request∉dom(AccumulatedPath(receiver))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="nodes∈ℙ(Nodes)" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀n⦂Nodes·n∈dom(path)⇒¬n ↦ n∈closure(path)" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="destination=(prj2 ⦂ ℙ(Nodes×Nodes×Nodes))(request)" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#8"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="receiver ↦ destination∉closure(LinkStateTable(receiver))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#9"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="nodes≠(∅ ⦂ ℙ(Nodes))" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#;"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="path=TransmittedPath(sender ↦ receiver)(request)∪{sender ↦ receiver}" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#="/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="nodes={q⦂Nodes·receiver ↦ q∈LinkStateTable(receiver)∧(∃p⦂Nodes,c⦂ℙ(Nodes×Nodes)·c⊆LinkStateTable(receiver)∧q ↦ p∈closure(c)∧card(c)=zoneRadius − 1∧(∀s⦂ℙ(Nodes×Nodes)·s⊆LinkStateTable(receiver)∧q ↦ p∈closure(s)∧card(s)≥card(c))∧p∉ZoneCoverage(receiver)(request))∧q≠sender ∣ q}" org.eventb.core.source="/ZRP1/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#'1|org.eventb.core.guard#&gt;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTransmittedReplyPat}" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="sender" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="path" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+<org.eventb.core.poIdentifier name="AccumulatedPath'" org.eventb.core.type="ℙ(Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="nodes" org.eventb.core.type="ℙ(Nodes)"/>
+<org.eventb.core.poIdentifier name="receiver" org.eventb.core.type="Nodes"/>
+<org.eventb.core.poIdentifier name="TransmittedPath'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℙ(Nodes×Nodes)))"/>
+<org.eventb.core.poIdentifier name="collection" org.eventb.core.type="ℙ(ℙ(Nodes×Nodes))"/>
+<org.eventb.core.poIdentifier name="IntendedNeighbor'" org.eventb.core.type="ℙ(Nodes×(Nodes×Nodes)×ℙ(Nodes))"/>
+<org.eventb.core.poIdentifier name="TransmittedTag'" org.eventb.core.type="ℙ(Nodes×Nodes×ℙ(Nodes×Nodes×ℤ))"/>
+<org.eventb.core.poIdentifier name="request" org.eventb.core.type="Nodes×Nodes"/>
+<org.eventb.core.poIdentifier name="routes" org.eventb.core.type="ℙ(Nodes×Nodes)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTransmittedReplyPat}" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#EVTIDENTTransmittedReplyPat}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sender∈Nodes∧receiver∈Nodes∧sender≠receiver" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="request∈RouteRequest" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TransmittedTag(sender ↦ receiver)(request)=1" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="request∉dom(AccumulatedPath(receiver))" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="nodes∈ℙ(Nodes)" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀n⦂Nodes·n∈dom(path)⇒¬n ↦ n∈closure(path)" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="nodes=(∅ ⦂ ℙ(Nodes))" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#:"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="destination=(prj2 ⦂ ℙ(Nodes×Nodes×Nodes))(request)" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#;"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="receiver ↦ destination∈closure(LinkStateTable(receiver))" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#="/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="collection={S⦂ℙ(Nodes×Nodes)·S⊆LinkStateTable(receiver)∧card(S)≤zoneRadius∧receiver ↦ destination∈closure(S) ∣ S}" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#&gt;"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="routes=union({R⦂ℙ(Nodes×Nodes)·∀S⦂ℙ(Nodes×Nodes)·S∈collection∧R∈collection∧card(R)≤card(S) ∣ R})" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#?"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="path=TransmittedPath(sender ↦ receiver)(request)∪{sender ↦ receiver}∪routes" org.eventb.core.source="/ZRP1/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#'2|org.eventb.core.guard#@"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPcc" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ReplySender∈Nodes → (Nodes ↔ Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'M"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ReplyPath∈Nodes → (Nodes × (Nodes × Nodes) → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'N"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TransmittedSender∈Nodes × Nodes → (Nodes ↔ Nodes × Nodes)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'O"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TransmittedReplyPath∈Nodes × Nodes → (Nodes × Nodes → (Nodes ↔ Nodes))" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'P"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPcd" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcc" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀n⦂Nodes,m⦂Nodes,r⦂Nodes×Nodes·n≠m∧TransmittedReplyPath(n ↦ m)(r)≠(∅ ⦂ ℙ(Nodes×Nodes))⇒n ↦ r∈TransmittedSender(n ↦ m)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'Q"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ZRP1/m8.bpo|org.eventb.core.poFile#m8|org.eventb.core.poPredicateSet#HYPcd" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀n⦂Nodes,s⦂Nodes,d⦂Nodes,rq⦂Nodes×Nodes,path⦂ℙ(Nodes×Nodes)·n∈Nodes∧s∈Nodes∧d∈Nodes∧rq=s ↦ d∧path=ReplyPath(n)(s ↦ rq)∧path≠(∅ ⦂ ℙ(Nodes×Nodes))⇒s ↦ d∈closure(path)" org.eventb.core.source="/ZRP1/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.invariant#'R"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
